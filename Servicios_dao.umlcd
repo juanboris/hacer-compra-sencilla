@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_KisFELh8EeuoK4ESIoDuPg">
+  <modelElement href="Lista_compra2.uml#_KuwLILh8EeuoK4ESIoDuPg"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_K2UywLh8EeuoK4ESIoDuPg" sourceAnchor="167.0,0.0" targetAnchor="64.0,54.0" target="_K2rYELh8EeuoK4ESIoDuPg" source="_K2VZ0Lh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KybKMbh8EeuoK4ESIoDuPg"/>
+    <stereotypes xmi:id="_K2Uywbh8EeuoK4ESIoDuPg" name="Reference">
+      <modelElement href="Lista_compra2.uml#_KybKM7h8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_K2Uywrh8EeuoK4ESIoDuPg" text="">
+      <visualProperties xmi:id="_LYLioLh8EeuoK4ESIoDuPg" position="-10.999192074190887,-22.19164003658029"/>
+    </nameVisual>
+    <sourceRole xmi:id="_K2Uyw7h8EeuoK4ESIoDuPg" aggregationKind="NONE" name="">
+      <modelElement href="Lista_compra2.uml#_KybKMrh8EeuoK4ESIoDuPg"/>
+      <visualProperties xmi:id="_LYK7k7h8EeuoK4ESIoDuPg" position="2.321068025454082,-73.31184950221885"/>
+      <visibility xmi:id="_K2UyxLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2Uyxbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_K2Uyxrh8EeuoK4ESIoDuPg" aggregationKind="NONE" name="listaCompDAO" navigable="true">
+      <modelElement href="Lista_compra2.uml#_KyQyIrh8EeuoK4ESIoDuPg"/>
+      <visualProperties xmi:id="_LYLiobh8EeuoK4ESIoDuPg" position="-47.2887305705614,4.823360552334648"/>
+      <visibility xmi:id="_K2Uyx7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K2UyyLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_K2cHgLh8EeuoK4ESIoDuPg" sourceAnchor="80.0,0.0" targetAnchor="249.0,0.0" target="_K2-TALh8EeuoK4ESIoDuPg" source="_K2cHibh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KycYUbh8EeuoK4ESIoDuPg"/>
+    <bendpoints xmi:id="_LYKUgrh8EeuoK4ESIoDuPg" sourceY="-526" targetX="-1274" targetY="-386"/>
+    <bendpoints xmi:id="_LYKUg7h8EeuoK4ESIoDuPg" sourceX="1274" sourceY="-526" targetY="-386"/>
+    <stereotypes xmi:id="_K2cHgbh8EeuoK4ESIoDuPg" name="Reference">
+      <modelElement href="Lista_compra2.uml#_KycYU7h8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_K2cHgrh8EeuoK4ESIoDuPg" text="">
+      <visualProperties xmi:id="_LYMwwLh8EeuoK4ESIoDuPg" position="-652.9289321881345,520.6568542494924"/>
+    </nameVisual>
+    <sourceRole xmi:id="_K2cHg7h8EeuoK4ESIoDuPg" aggregationKind="NONE" name="">
+      <modelElement href="Lista_compra2.uml#_KycYUrh8EeuoK4ESIoDuPg"/>
+      <visualProperties xmi:id="_LYMJsLh8EeuoK4ESIoDuPg" position="2.96015510839149,-73.81549416771884"/>
+      <visibility xmi:id="_K2cHhLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2cHhbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_K2cHhrh8EeuoK4ESIoDuPg" aggregationKind="NONE" name="recetaDAO" navigable="true">
+      <modelElement href="Lista_compra2.uml#_KySAQrh8EeuoK4ESIoDuPg"/>
+      <visualProperties xmi:id="_LYMwwbh8EeuoK4ESIoDuPg" position="-1307.8933982822018,161.99747468305833"/>
+      <visibility xmi:id="_K2cHh7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K2cHiLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_K2kDULh8EeuoK4ESIoDuPg" sourceAnchor="229.0,0.0" targetAnchor="64.0,54.0" target="_K2tNQLh8EeuoK4ESIoDuPg" source="_K2kqYLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KyajILh8EeuoK4ESIoDuPg"/>
+    <stereotypes xmi:id="_K2kDUbh8EeuoK4ESIoDuPg" name="Reference">
+      <modelElement href="Lista_compra2.uml#_KybKMLh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_K2kDUrh8EeuoK4ESIoDuPg" text="">
+      <visualProperties xmi:id="_LYNX0bh8EeuoK4ESIoDuPg" position="-19.646718166348023,-86.88706324712601"/>
+    </nameVisual>
+    <sourceRole xmi:id="_K2kDU7h8EeuoK4ESIoDuPg" aggregationKind="NONE" name="">
+      <modelElement href="Lista_compra2.uml#_KyajIbh8EeuoK4ESIoDuPg"/>
+      <visualProperties xmi:id="_LYNX0Lh8EeuoK4ESIoDuPg" position="-1.9085157986513082,-86.18682833672918"/>
+      <visibility xmi:id="_K2kDVLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2kDVbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_K2kDVrh8EeuoK4ESIoDuPg" aggregationKind="NONE" name="calendarioDAO" navigable="true">
+      <modelElement href="Lista_compra2.uml#_KyQLELh8EeuoK4ESIoDuPg"/>
+      <visualProperties xmi:id="_LYN-4Lh8EeuoK4ESIoDuPg" position="-53.42996580810524,-120.63920723124289"/>
+      <visibility xmi:id="_K2kDV7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K2kDWLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_K2ubYLh8EeuoK4ESIoDuPg" sourceAnchor="270.0,0.0" targetAnchor="268.0,108.0" target="_K2o70Lh8EeuoK4ESIoDuPg" source="_K2yFwLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KybKNLh8EeuoK4ESIoDuPg"/>
+    <stereotypes xmi:id="_K2vCc7h8EeuoK4ESIoDuPg" name="Reference">
+      <modelElement href="Lista_compra2.uml#_KycYULh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_K2vCcLh8EeuoK4ESIoDuPg" text="">
+      <visualProperties xmi:id="_LYN-4rh8EeuoK4ESIoDuPg" position="-12.092793577167186,-4.5538599829329485"/>
+    </nameVisual>
+    <sourceRole xmi:id="_K2vCcbh8EeuoK4ESIoDuPg" aggregationKind="NONE" name="">
+      <modelElement href="Lista_compra2.uml#_KybKNbh8EeuoK4ESIoDuPg"/>
+      <visualProperties xmi:id="_LYN-4bh8EeuoK4ESIoDuPg" position="3.3358706382591663,-77.40739461114609"/>
+      <visibility xmi:id="_K2w3obh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2w3oLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_K2vCcrh8EeuoK4ESIoDuPg" aggregationKind="NONE" name="productoDAO" navigable="true">
+      <modelElement href="Lista_compra2.uml#_KyRZMrh8EeuoK4ESIoDuPg"/>
+      <visualProperties xmi:id="_LYOl8Lh8EeuoK4ESIoDuPg" position="-43.03478772446647,23.887672844694904"/>
+      <visibility xmi:id="_K2w3o7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K2w3orh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_K26BkLh8EeuoK4ESIoDuPg" sourceAnchor="0.0,88.0" targetAnchor="248.0,177.0" dashed="true" superClass="_K26ooLh8EeuoK4ESIoDuPg" subClass="_K2cHibh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KxmDwLh8EeuoK4ESIoDuPg"/>
+    <bendpoints xmi:id="_LYKUhLh8EeuoK4ESIoDuPg" sourceX="-758" targetY="143"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_K3AIMLh8EeuoK4ESIoDuPg" sourceAnchor="539.0,111.0" targetAnchor="256.0,223.0" dashed="true" superClass="_K3CkcLh8EeuoK4ESIoDuPg" subClass="_K2yFwLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KxiZYLh8EeuoK4ESIoDuPg"/>
+    <bendpoints xmi:id="_LYK7kLh8EeuoK4ESIoDuPg" sourceX="656" targetY="166"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_K3G14Lh8EeuoK4ESIoDuPg" sourceAnchor="0.0,88.0" targetAnchor="325.0,89.0" dashed="true" superClass="_K3KgQLh8EeuoK4ESIoDuPg" subClass="_K2VZ0Lh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KxhLQLh8EeuoK4ESIoDuPg"/>
+    <bendpoints xmi:id="_LYKUgLh8EeuoK4ESIoDuPg" sourceX="-45" targetX="553" targetY="231"/>
+    <bendpoints xmi:id="_LYKUgbh8EeuoK4ESIoDuPg" sourceX="-45" sourceY="-231" targetX="553"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_K3NjkLh8EeuoK4ESIoDuPg" sourceAnchor="0.0,39.0" targetAnchor="215.0,154.0" dashed="true" superClass="_K3Qm4Lh8EeuoK4ESIoDuPg" subClass="_K2kqYLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_Kxbrsrh8EeuoK4ESIoDuPg"/>
+    <bendpoints xmi:id="_LYKUhbh8EeuoK4ESIoDuPg" sourceX="-671" targetY="94"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_K3TqMLh8EeuoK4ESIoDuPg" sourceAnchor="444.0,92.0" targetAnchor="180.0,131.0" dashed="true" superClass="_K23lULh8EeuoK4ESIoDuPg" subClass="_K3Wtibh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_Kxq8Qbh8EeuoK4ESIoDuPg"/>
+    <bendpoints xmi:id="_LYK7krh8EeuoK4ESIoDuPg" sourceX="318" targetY="147"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_K3WtgLh8EeuoK4ESIoDuPg" source="_K3Wtibh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KycYVLh8EeuoK4ESIoDuPg"/>
+    <stereotypes xmi:id="_K3Wtgbh8EeuoK4ESIoDuPg" name="Reference">
+      <modelElement href="Lista_compra2.uml#_Kyc_YLh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_K3Wtgrh8EeuoK4ESIoDuPg" text=""/>
+    <sourceRole xmi:id="_K3Wtg7h8EeuoK4ESIoDuPg" aggregationKind="NONE" name="">
+      <modelElement href="Lista_compra2.uml#_KycYVbh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3WthLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Wthbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_K3Wthrh8EeuoK4ESIoDuPg" aggregationKind="NONE" name="logger" navigable="true">
+      <modelElement href="Lista_compra2.uml#_KySnUrh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Wth7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K3WtiLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_bUE-oLh8EeuoK4ESIoDuPg" target="_K2hAALh8EeuoK4ESIoDuPg" source="_K3Wtibh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_bTKYobh8EeuoK4ESIoDuPg"/>
+    <stereotypes xmi:id="_bUE-obh8EeuoK4ESIoDuPg" name="Reference">
+      <modelElement href="Lista_compra2.uml#_bTK_sLh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <nameVisual xmi:id="_bUE-orh8EeuoK4ESIoDuPg" text=""/>
+    <sourceRole xmi:id="_bUE-o7h8EeuoK4ESIoDuPg" aggregationKind="NONE" name="">
+      <modelElement href="Lista_compra2.uml#_bTKYorh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_bUE-pLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_bUE-pbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_bUE-prh8EeuoK4ESIoDuPg" aggregationKind="NONE" name="iUsuarioDAO" navigable="true">
+      <modelElement href="Lista_compra2.uml#_bTIjcLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_bUi4sLh8EeuoK4ESIoDuPg" name="Annotations"/>
+      <visibility xmi:id="_bUE-p7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_bUE-qLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_K2VZ0Lh8EeuoK4ESIoDuPg" name="ListaCompServiceImpl" associationsOut="_K2UywLh8EeuoK4ESIoDuPg" generalizations="_K3G14Lh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvpjALh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K2VZ0bh8EeuoK4ESIoDuPg" position="30.0,30.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_K2VZ0rh8EeuoK4ESIoDuPg" name="LegacyStyledElement">
+      <modelElement href="Lista_compra2.uml#_KvqKELh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_K2VZ07h8EeuoK4ESIoDuPg" name="Annotations">
+      <modelElement href="Lista_compra2.uml#_Kvr_QLh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <visibility xmi:id="_K2VZ1Lh8EeuoK4ESIoDuPg" label="+"/>
+    <attributes xmi:id="_K2VZ1bh8EeuoK4ESIoDuPg" name="listaCompDAO">
+      <modelElement href="Lista_compra2.uml#_KyQyIrh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2VZ1rh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyRZMLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2VZ17h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K2VZ2Lh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <type xmi:id="_K2VZ2bh8EeuoK4ESIoDuPg" name="IListaCompDAO">
+        <modelElement href="Lista_compra2.uml#_KvUy4Lh8EeuoK4ESIoDuPg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_K2VZ2rh8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_KvqKEbh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2VZ27h8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KvqxIrh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2VZ3Lh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2VZ3bh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K2VZ3rh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KvqxILh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2VZ37h8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K2VZ4Lh8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_Kx_sYLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2VZ4bh8EeuoK4ESIoDuPg" name="Generics">
+        <modelElement href="Lista_compra2.uml#_KyATcLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_K2VZ4rh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyA6gLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2VZ47h8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2VZ5Lh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2VZ5bh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyATcbh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2VZ5rh8EeuoK4ESIoDuPg" name="Page">
+          <modelElement href="Lista_compra2.uml#_KxWzMLh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2VZ57h8EeuoK4ESIoDuPg" name="pageable">
+        <modelElement href="Lista_compra2.uml#_Kx_sYbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2VZ6Lh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2VZ6bh8EeuoK4ESIoDuPg" name="Pageable">
+          <modelElement href="Lista_compra2.uml#_KxWzMrh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2VZ6rh8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_KyA6hLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2VZ67h8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyBhkbh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2VZ7Lh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2VZ7bh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2VZ7rh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyBhkLh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2VZ77h8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2VZ8Lh8EeuoK4ESIoDuPg" name="listaCom">
+        <modelElement href="Lista_compra2.uml#_KyA6hbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2VZ8bh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2VZ8rh8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2VZ87h8EeuoK4ESIoDuPg" name="findById">
+      <modelElement href="Lista_compra2.uml#_KyBhlLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2VZ9Lh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyCIorh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2VZ9bh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2VZ9rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2VZ97h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyCIobh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2VZ-Lh8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2VZ-bh8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_KyCIoLh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2VZ-rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2VZ-7h8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2VZ_Lh8EeuoK4ESIoDuPg" name="delete">
+      <modelElement href="Lista_compra2.uml#_KyCvsLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2VZ_bh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyDWwLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2VZ_rh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2VZ_7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_K2VaALh8EeuoK4ESIoDuPg" name="listaCom">
+        <modelElement href="Lista_compra2.uml#_KyCvsbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2VaAbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2VaArh8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_K2cHibh8EeuoK4ESIoDuPg" name="RecetaServiceImpl" associationsOut="_K2cHgLh8EeuoK4ESIoDuPg" generalizations="_K26BkLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_Kv1wQLh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K2cHirh8EeuoK4ESIoDuPg" position="-65.0,316.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_K2cHi7h8EeuoK4ESIoDuPg" name="LegacyStyledElement">
+      <modelElement href="Lista_compra2.uml#_Kv2XULh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_K2cHjLh8EeuoK4ESIoDuPg" name="Annotations">
+      <modelElement href="Lista_compra2.uml#_Kv4zkLh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <visibility xmi:id="_K2cHjbh8EeuoK4ESIoDuPg" label="+"/>
+    <attributes xmi:id="_K2cHjrh8EeuoK4ESIoDuPg" name="recetaDAO">
+      <modelElement href="Lista_compra2.uml#_KySAQrh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2cHj7h8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KySnULh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2cHkLh8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K2cHkbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <type xmi:id="_K2cHkrh8EeuoK4ESIoDuPg" name="IRecetaDAO">
+        <modelElement href="Lista_compra2.uml#_KvXPILh8EeuoK4ESIoDuPg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_K2cHk7h8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_Kv2XUbh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2cHlLh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kv2-YLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2cHlbh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2cHlrh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K2cHl7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kv2XUrh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2cHmLh8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K2cHmbh8EeuoK4ESIoDuPg" name="findByNombreStartingWithIgnoreCase">
+      <modelElement href="Lista_compra2.uml#_Kv3lcLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2cHmrh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kv4MgLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2cHm7h8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2cHnLh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K2cHnbh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kv3lcrh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2cHnrh8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2cHn7h8EeuoK4ESIoDuPg" name="term">
+        <modelElement href="Lista_compra2.uml#_Kv3lcbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2cHoLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2cHobh8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2cHorh8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_KyKEcLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2cHo7h8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyKrgrh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2cHpLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2cHpbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2cHprh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyKrgbh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2cHp7h8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2cHqLh8EeuoK4ESIoDuPg" name="receta">
+        <modelElement href="Lista_compra2.uml#_KyKrgLh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2cHqbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2cHqrh8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2cHq7h8EeuoK4ESIoDuPg" name="findById">
+      <modelElement href="Lista_compra2.uml#_KyKrhbh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2cHrLh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyLSkbh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2cHrbh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2cHrrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2cHr7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyLSkLh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2cHsLh8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2cHsbh8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_KyKrhrh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2cHsrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2cHs7h8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2cHtLh8EeuoK4ESIoDuPg" name="delete">
+      <modelElement href="Lista_compra2.uml#_KyL5oLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2cHtbh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyMgsbh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2cHtrh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2cHt7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_K2cHuLh8EeuoK4ESIoDuPg" name="receta">
+        <modelElement href="Lista_compra2.uml#_KyMgsLh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2cHubh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2cHurh8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K2hAALh8EeuoK4ESIoDuPg" name="IUsuarioDAO" associationsIn="_bUE-oLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvYdQLh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K2hAAbh8EeuoK4ESIoDuPg" position="-495.0,427.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K2hAArh8EeuoK4ESIoDuPg" label="+"/>
+    <operations xmi:id="_K2hAA7h8EeuoK4ESIoDuPg" name="findByUsername">
+      <modelElement href="Lista_compra2.uml#_KvYdQbh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K2hABLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2hABbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2hABrh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KxzfIbh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2hAB7h8EeuoK4ESIoDuPg" name="Usuario">
+          <modelElement href="Lista_compra2.uml#_KxZ2gbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2hACLh8EeuoK4ESIoDuPg" name="username">
+        <modelElement href="Lista_compra2.uml#_KvYdQrh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2hACbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2hACrh8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_K2kqYLh8EeuoK4ESIoDuPg" name="CalendarioServiceImpl" associationsOut="_K2kDULh8EeuoK4ESIoDuPg" generalizations="_K3NjkLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvZEULh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K2kqYbh8EeuoK4ESIoDuPg" position="-497.0,30.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_K2kqYrh8EeuoK4ESIoDuPg" name="LegacyStyledElement">
+      <modelElement href="Lista_compra2.uml#_KvZrYLh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_K2kqY7h8EeuoK4ESIoDuPg" name="Annotations">
+      <modelElement href="Lista_compra2.uml#_KvbgkLh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <visibility xmi:id="_K2kqZLh8EeuoK4ESIoDuPg" label="+"/>
+    <attributes xmi:id="_K2kqZbh8EeuoK4ESIoDuPg" name="calendarioDAO">
+      <modelElement href="Lista_compra2.uml#_KyQLELh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2kqZrh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyQyILh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2kqZ7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K2kqaLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <type xmi:id="_K2kqabh8EeuoK4ESIoDuPg" name="ICalendarioDAO">
+        <modelElement href="Lista_compra2.uml#_KvS9sLh8EeuoK4ESIoDuPg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_K2kqarh8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_KvaScLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2kqa7h8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kva5grh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2kqbLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2kqbbh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K2kqbrh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kva5gLh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2kqb7h8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K2kqcLh8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_Kx0GMLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2kqcbh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kx0GM7h8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2kqcrh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2kqc7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2kqdLh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx0GMrh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2kqdbh8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2kqdrh8EeuoK4ESIoDuPg" name="calendario">
+        <modelElement href="Lista_compra2.uml#_Kx0GMbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2kqd7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2kqeLh8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2kqebh8EeuoK4ESIoDuPg" name="findById">
+      <modelElement href="Lista_compra2.uml#_Kx0tQLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2kqerh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kx0tQ7h8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2kqe7h8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2kqfLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2kqfbh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx0tQrh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2kqfrh8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2kqf7h8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_Kx0tQbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2kqgLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2kqgbh8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2kqgrh8EeuoK4ESIoDuPg" name="delete">
+      <modelElement href="Lista_compra2.uml#_Kx1UU7h8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2kqg7h8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kx1UVbh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2kqhLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2kqhbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_K2kqhrh8EeuoK4ESIoDuPg" name="calendario">
+        <modelElement href="Lista_compra2.uml#_Kx1UVLh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2kqh7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2kqiLh8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K2o70Lh8EeuoK4ESIoDuPg" name="IProductoDAO" associationsIn="_K2ubYLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvUy4bh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K2o70bh8EeuoK4ESIoDuPg" position="423.0,-195.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K2o70rh8EeuoK4ESIoDuPg" label="+"/>
+    <operations xmi:id="_K2o707h8EeuoK4ESIoDuPg" name="findByNombreStartingWithIgnoreCase">
+      <modelElement href="Lista_compra2.uml#_KvWBALh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K2o71Lh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2o71bh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K2o71rh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KvWBArh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2o717h8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2o72Lh8EeuoK4ESIoDuPg" name="term">
+        <modelElement href="Lista_compra2.uml#_KvWBAbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2o72bh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2o72rh8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2o727h8EeuoK4ESIoDuPg" name="findAllByUsuarioIdEquals">
+      <modelElement href="Lista_compra2.uml#_Kxxp8bh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2o73Lh8EeuoK4ESIoDuPg" name="Generics">
+        <modelElement href="Lista_compra2.uml#_KxyRALh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2o73bh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2o73rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2o737h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KxyRAbh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2o74Lh8EeuoK4ESIoDuPg" name="Page">
+          <modelElement href="Lista_compra2.uml#_KxWzMLh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2o74bh8EeuoK4ESIoDuPg" name="pageable">
+        <modelElement href="Lista_compra2.uml#_Kxxp8rh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2o74rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2o747h8EeuoK4ESIoDuPg" name="Pageable">
+          <modelElement href="Lista_compra2.uml#_KxWzMrh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_K2o75Lh8EeuoK4ESIoDuPg" name="name">
+        <modelElement href="Lista_compra2.uml#_Kxxp87h8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2o75bh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2o75rh8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K2rYELh8EeuoK4ESIoDuPg" name="IListaCompDAO" associationsIn="_K2UywLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvUy4Lh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K2rYEbh8EeuoK4ESIoDuPg" position="133.0,-79.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K2rYErh8EeuoK4ESIoDuPg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K2tNQLh8EeuoK4ESIoDuPg" name="ICalendarioDAO" associationsIn="_K2kDULh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvS9sLh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K2tNQbh8EeuoK4ESIoDuPg" position="-332.0,-79.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K2tNQrh8EeuoK4ESIoDuPg" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_K2yFwLh8EeuoK4ESIoDuPg" name="ProductoServiceImpl" associationsOut="_K2ubYLh8EeuoK4ESIoDuPg" generalizations="_K3AIMLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvvCkLh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K2yFwbh8EeuoK4ESIoDuPg" position="421.0,-32.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_K2yFwrh8EeuoK4ESIoDuPg" name="LegacyStyledElement">
+      <modelElement href="Lista_compra2.uml#_KvvpoLh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_K2yFw7h8EeuoK4ESIoDuPg" name="Annotations">
+      <modelElement href="Lista_compra2.uml#_Kvys87h8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <visibility xmi:id="_K2yFxLh8EeuoK4ESIoDuPg" label="+"/>
+    <attributes xmi:id="_K2yFxbh8EeuoK4ESIoDuPg" name="productoDAO">
+      <modelElement href="Lista_compra2.uml#_KyRZMrh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2yFxrh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KySAQLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2yFx7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K2yFyLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <type xmi:id="_K2yFybh8EeuoK4ESIoDuPg" name="IProductoDAO">
+        <modelElement href="Lista_compra2.uml#_KvUy4bh8EeuoK4ESIoDuPg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_K2yFyrh8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_KvwQsLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2yFy7h8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kvw3wLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2yFzLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2yFzbh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K2yFzrh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KvwQsbh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2yFz7h8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K2yF0Lh8EeuoK4ESIoDuPg" name="findByNombreStartingWithIgnoreCase">
+      <modelElement href="Lista_compra2.uml#_Kvxe0Lh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2yF0bh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KvyF47h8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2yF0rh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2yF07h8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K2yF1Lh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KvyF4bh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2yF1bh8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2yF1rh8EeuoK4ESIoDuPg" name="term">
+        <modelElement href="Lista_compra2.uml#_KvyF4Lh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2yF17h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2yF2Lh8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2yF2bh8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_KyD90Lh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2yF2rh8EeuoK4ESIoDuPg" name="Generics">
+        <modelElement href="Lista_compra2.uml#_KyEk4Lh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_K2yF27h8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyEk4rh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2yF3Lh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2yF3bh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2yF3rh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyEk4bh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2yF37h8EeuoK4ESIoDuPg" name="Page">
+          <modelElement href="Lista_compra2.uml#_KxWzMLh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2yF4Lh8EeuoK4ESIoDuPg" name="pageable">
+        <modelElement href="Lista_compra2.uml#_KyD90bh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2yF4bh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2yF4rh8EeuoK4ESIoDuPg" name="Pageable">
+          <modelElement href="Lista_compra2.uml#_KxWzMrh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2yF47h8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_KyFL8rh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2yF5Lh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyFzArh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2yF5bh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2yF5rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2yF57h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyFzAbh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2yF6Lh8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2yF6bh8EeuoK4ESIoDuPg" name="producto">
+        <modelElement href="Lista_compra2.uml#_KyFzALh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2yF6rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2yF67h8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2yF7Lh8EeuoK4ESIoDuPg" name="findById">
+      <modelElement href="Lista_compra2.uml#_KyGaELh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2yF7bh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyHBILh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2yF7rh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2yF77h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2yF8Lh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyGaErh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2yF8bh8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2yF8rh8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_KyGaEbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2yF87h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2yF9Lh8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2yF9bh8EeuoK4ESIoDuPg" name="delete">
+      <modelElement href="Lista_compra2.uml#_KyHBJLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2yF9rh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyHoMLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2yF97h8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2yF-Lh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_K2yF-bh8EeuoK4ESIoDuPg" name="producto">
+        <modelElement href="Lista_compra2.uml#_KyHBJbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2yF-rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2yF-7h8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K2yF_Lh8EeuoK4ESIoDuPg" name="findAllByUsuarioIdEquals">
+      <modelElement href="Lista_compra2.uml#_KyIPQLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K2yF_bh8EeuoK4ESIoDuPg" name="Generics">
+        <modelElement href="Lista_compra2.uml#_KyI2ULh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <stereotypes xmi:id="_K2yF_rh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyJdYLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K2yF_7h8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2yGALh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K2yGAbh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyI2Ubh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2yGArh8EeuoK4ESIoDuPg" name="Page">
+          <modelElement href="Lista_compra2.uml#_KxWzMLh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2yGA7h8EeuoK4ESIoDuPg" name="pageable">
+        <modelElement href="Lista_compra2.uml#_KyIPQbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2yGBLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2yGBbh8EeuoK4ESIoDuPg" name="Pageable">
+          <modelElement href="Lista_compra2.uml#_KxWzMrh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_K2yGBrh8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_KyIPQrh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2yGB7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2yGCLh8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K23lULh8EeuoK4ESIoDuPg" name="IUsuarioService" subclassedBy="_K3TqMLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvnGwLh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K23lUbh8EeuoK4ESIoDuPg" position="524.0,381.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K23lUrh8EeuoK4ESIoDuPg" label="+"/>
+    <operations xmi:id="_K23lU7h8EeuoK4ESIoDuPg" name="findByUsername">
+      <modelElement href="Lista_compra2.uml#_Kvnt0Lh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K23lVLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K23lVbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K23lVrh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx-eQLh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K23lV7h8EeuoK4ESIoDuPg" name="Usuario">
+          <modelElement href="Lista_compra2.uml#_KxZ2gbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K23lWLh8EeuoK4ESIoDuPg" name="username">
+        <modelElement href="Lista_compra2.uml#_Kvnt0bh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K23lWbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K23lWrh8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K23lW7h8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_Kvnt0rh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K23lXLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K23lXbh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K23lXrh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KvoU4Lh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K23lX7h8EeuoK4ESIoDuPg" name="Usuario">
+          <modelElement href="Lista_compra2.uml#_KxZ2gbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K23lYLh8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_Kx_FULh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K23lYbh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K23lYrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K23lY7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx_FUrh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K23lZLh8EeuoK4ESIoDuPg" name="Usuario">
+          <modelElement href="Lista_compra2.uml#_KxZ2gbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K23lZbh8EeuoK4ESIoDuPg" name="usuario">
+        <modelElement href="Lista_compra2.uml#_Kx_FUbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K23lZrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K23lZ7h8EeuoK4ESIoDuPg" name="Usuario">
+          <modelElement href="Lista_compra2.uml#_KxZ2gbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K26ooLh8EeuoK4ESIoDuPg" name="IRecetaService" subclassedBy="_K26BkLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvkDcLh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K26oobh8EeuoK4ESIoDuPg" position="-1071.0,84.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K26oorh8EeuoK4ESIoDuPg" label="+"/>
+    <operations xmi:id="_K26oo7h8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_KvkqgLh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K26opLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K26opbh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K26oprh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kvkqgbh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K26op7h8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K26oqLh8EeuoK4ESIoDuPg" name="findByNombreStartingWithIgnoreCase">
+      <modelElement href="Lista_compra2.uml#_Kvl4oLh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K26oqbh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K26oqrh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K26oq7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kvl4orh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K26orLh8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K26orbh8EeuoK4ESIoDuPg" name="term">
+        <modelElement href="Lista_compra2.uml#_Kvl4obh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K26orrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K26or7h8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K26osLh8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_Kx8pELh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K26osbh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K26osrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K26os7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx9QILh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K26otLh8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K26otbh8EeuoK4ESIoDuPg" name="receta">
+        <modelElement href="Lista_compra2.uml#_Kx8pEbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K26otrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K26ot7h8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K26ouLh8EeuoK4ESIoDuPg" name="findById">
+      <modelElement href="Lista_compra2.uml#_Kx9QIbh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K26oubh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K26ourh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K26ou7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx9QI7h8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K26ovLh8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K26ovbh8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_Kx9QIrh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K26ovrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K26ov7h8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K26owLh8EeuoK4ESIoDuPg" name="delete">
+      <modelElement href="Lista_compra2.uml#_Kx93MLh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K26owbh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K26owrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_K26ow7h8EeuoK4ESIoDuPg" name="receta">
+        <modelElement href="Lista_compra2.uml#_Kx93Mbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K26oxLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K26oxbh8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K2-TALh8EeuoK4ESIoDuPg" name="IRecetaDAO" associationsIn="_K2cHgLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvXPILh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K2-TAbh8EeuoK4ESIoDuPg" position="1040.0,176.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K2-TArh8EeuoK4ESIoDuPg" label="+"/>
+    <operations xmi:id="_K2-TA7h8EeuoK4ESIoDuPg" name="findByNombreStartingWithIgnoreCase">
+      <modelElement href="Lista_compra2.uml#_KvXPIbh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K2-TBLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K2-TBbh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K2-TBrh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KvX2MLh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K2-TB7h8EeuoK4ESIoDuPg" name="Receta">
+          <modelElement href="Lista_compra2.uml#_KxYoYbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K2-TCLh8EeuoK4ESIoDuPg" name="term">
+        <modelElement href="Lista_compra2.uml#_KvXPIrh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K2-TCbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K2-TCrh8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K3CkcLh8EeuoK4ESIoDuPg" name="IProductoService" subclassedBy="_K3AIMLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvhAILh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K3Ckcbh8EeuoK4ESIoDuPg" position="1360.0,-310.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K3Ckcrh8EeuoK4ESIoDuPg" label="+"/>
+    <operations xmi:id="_K3Ckc7h8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_KvhAIbh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3CkdLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Ckdbh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K3Ckdrh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KvhAIrh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3Ckd7h8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K3CkeLh8EeuoK4ESIoDuPg" name="findByNombreStartingWithIgnoreCase">
+      <modelElement href="Lista_compra2.uml#_KvhnMbh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Ckebh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Ckerh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K3Cke7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KviOQLh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3CkfLh8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Ckfbh8EeuoK4ESIoDuPg" name="term">
+        <modelElement href="Lista_compra2.uml#_KvhnMrh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Ckfrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3Ckf7h8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3CkgLh8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_Kx5lwLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K3Ckgbh8EeuoK4ESIoDuPg" name="Generics">
+        <modelElement href="Lista_compra2.uml#_Kx6M0Lh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K3Ckgrh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Ckg7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3CkhLh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx6M0bh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3Ckhbh8EeuoK4ESIoDuPg" name="Page">
+          <modelElement href="Lista_compra2.uml#_KxWzMLh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Ckhrh8EeuoK4ESIoDuPg" name="pageable">
+        <modelElement href="Lista_compra2.uml#_Kx5lwbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Ckh7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3CkiLh8EeuoK4ESIoDuPg" name="Pageable">
+          <modelElement href="Lista_compra2.uml#_KxWzMrh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3Ckibh8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_Kx6M0rh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Ckirh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Cki7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3CkjLh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx6M1Lh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3Ckjbh8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Ckjrh8EeuoK4ESIoDuPg" name="producto">
+        <modelElement href="Lista_compra2.uml#_Kx6M07h8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Ckj7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3CkkLh8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3Ckkbh8EeuoK4ESIoDuPg" name="findById">
+      <modelElement href="Lista_compra2.uml#_Kx6z4Lh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Ckkrh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Ckk7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3CklLh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx6z4rh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3Cklbh8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Cklrh8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_Kx6z4bh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Ckl7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3CkmLh8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3Ckmbh8EeuoK4ESIoDuPg" name="delete">
+      <modelElement href="Lista_compra2.uml#_Kx6z47h8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Ckmrh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Ckm7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_K3CknLh8EeuoK4ESIoDuPg" name="producto">
+        <modelElement href="Lista_compra2.uml#_Kx6z5Lh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Cknbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3Cknrh8EeuoK4ESIoDuPg" name="Producto">
+          <modelElement href="Lista_compra2.uml#_KxXaQbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3Ckn7h8EeuoK4ESIoDuPg" name="findAllByUsuarioIdEquals">
+      <modelElement href="Lista_compra2.uml#_Kx7a8Lh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K3CkoLh8EeuoK4ESIoDuPg" name="Generics">
+        <modelElement href="Lista_compra2.uml#_Kx8CALh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K3Ckobh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Ckorh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3Cko7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx8CAbh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3CkpLh8EeuoK4ESIoDuPg" name="Page">
+          <modelElement href="Lista_compra2.uml#_KxWzMLh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Ckpbh8EeuoK4ESIoDuPg" name="pageable">
+        <modelElement href="Lista_compra2.uml#_Kx7a8bh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Ckprh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3Ckp7h8EeuoK4ESIoDuPg" name="Pageable">
+          <modelElement href="Lista_compra2.uml#_KxWzMrh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_K3CkqLh8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_Kx7a8rh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Ckqbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3Ckqrh8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K3KgQLh8EeuoK4ESIoDuPg" name="IListaCompService" subclassedBy="_K3G14Lh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_Kvej4Lh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K3KgQbh8EeuoK4ESIoDuPg" position="-893.0,-202.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K3KgQrh8EeuoK4ESIoDuPg" label="+"/>
+    <operations xmi:id="_K3KgQ7h8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_KvfK8Lh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3KgRLh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3KgRbh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K3KgRrh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KvfK8bh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3KgR7h8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K3KgSLh8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_Kx3wkLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K3KgSbh8EeuoK4ESIoDuPg" name="Generics">
+        <modelElement href="Lista_compra2.uml#_Kx3wkrh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K3KgSrh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3KgS7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3KgTLh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx4XoLh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3KgTbh8EeuoK4ESIoDuPg" name="Page">
+          <modelElement href="Lista_compra2.uml#_KxWzMLh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3KgTrh8EeuoK4ESIoDuPg" name="pageable">
+        <modelElement href="Lista_compra2.uml#_Kx3wkbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3KgT7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3KgULh8EeuoK4ESIoDuPg" name="Pageable">
+          <modelElement href="Lista_compra2.uml#_KxWzMrh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3KgUbh8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_Kx4Xobh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3KgUrh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3KgU7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3KgVLh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx4-sLh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3KgVbh8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3KgVrh8EeuoK4ESIoDuPg" name="listaCom">
+        <modelElement href="Lista_compra2.uml#_Kx4Xorh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3KgV7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3KgWLh8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3KgWbh8EeuoK4ESIoDuPg" name="findById">
+      <modelElement href="Lista_compra2.uml#_Kx4-sbh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3KgWrh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3KgW7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3KgXLh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx4-s7h8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3KgXbh8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3KgXrh8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_Kx4-srh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3KgX7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3KgYLh8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3KgYbh8EeuoK4ESIoDuPg" name="delete">
+      <modelElement href="Lista_compra2.uml#_Kx4-tLh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3KgYrh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3KgY7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_K3KgZLh8EeuoK4ESIoDuPg" name="listaCom">
+        <modelElement href="Lista_compra2.uml#_Kx4-tbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3KgZbh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3KgZrh8EeuoK4ESIoDuPg" name="ListaCom">
+          <modelElement href="Lista_compra2.uml#_KxU-A7h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_K3Qm4Lh8EeuoK4ESIoDuPg" name="ICalendarioService" subclassedBy="_K3NjkLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_KvcusLh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K3Qm4bh8EeuoK4ESIoDuPg" position="-1383.0,-179.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_K3Qm4rh8EeuoK4ESIoDuPg" label="+"/>
+    <operations xmi:id="_K3Qm47h8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_KvdVwLh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Qm5Lh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Qm5bh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K3Qm5rh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KvdVwbh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3Qm57h8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K3Qm6Lh8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_Kx2icLh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Qm6bh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Qm6rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3Qm67h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx2icrh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3Qm7Lh8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Qm7bh8EeuoK4ESIoDuPg" name="calendario">
+        <modelElement href="Lista_compra2.uml#_Kx2icbh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Qm7rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3Qm77h8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3Qm8Lh8EeuoK4ESIoDuPg" name="findById">
+      <modelElement href="Lista_compra2.uml#_Kx2ic7h8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Qm8bh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Qm8rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3Qm87h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kx3JgLh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3Qm9Lh8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Qm9bh8EeuoK4ESIoDuPg" name="id">
+        <modelElement href="Lista_compra2.uml#_Kx2idLh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Qm9rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3Qm97h8EeuoK4ESIoDuPg" name="Long">
+          <modelElement href="Lista_compra2.uml#_KxxC47h8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3Qm-Lh8EeuoK4ESIoDuPg" name="delete">
+      <modelElement href="Lista_compra2.uml#_Kx3Jgbh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Qm-bh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Qm-rh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <parameters xmi:id="_K3Qm-7h8EeuoK4ESIoDuPg" name="calendario">
+        <modelElement href="Lista_compra2.uml#_Kx3Jgrh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Qm_Lh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3Qm_bh8EeuoK4ESIoDuPg" name="RecetaCalendario">
+          <modelElement href="Lista_compra2.uml#_KxU-Abh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_K3Wtibh8EeuoK4ESIoDuPg" name="UsuarioServiceImpl" associationsOut="_K3WtgLh8EeuoK4ESIoDuPg _bUE-oLh8EeuoK4ESIoDuPg" generalizations="_K3TqMLh8EeuoK4ESIoDuPg">
+    <modelElement href="Lista_compra2.uml#_Kv6BsLh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K3Wtirh8EeuoK4ESIoDuPg" position="-58.0,567.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_K3Wti7h8EeuoK4ESIoDuPg" name="LegacyStyledElement">
+      <modelElement href="Lista_compra2.uml#_Kv6owLh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <stereotypes xmi:id="_K3WtjLh8EeuoK4ESIoDuPg" name="Annotations">
+      <modelElement href="Lista_compra2.uml#_Kv-TILh8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <visibility xmi:id="_K3Wtjbh8EeuoK4ESIoDuPg" label="+"/>
+    <attributes xmi:id="_K3Wtjrh8EeuoK4ESIoDuPg" defaultValue="LoggerFactory.getLogger(UsuarioServiceImpl.class)" name="logger">
+      <modelElement href="Lista_compra2.uml#_KySnUrh8EeuoK4ESIoDuPg"/>
+      <visibility xmi:id="_K3Wtj7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_K3WtkLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <type xmi:id="_K3Wtkbh8EeuoK4ESIoDuPg" name="Logger">
+        <modelElement href="Lista_compra2.uml#_Kxn48bh8EeuoK4ESIoDuPg"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_bUE-qbh8EeuoK4ESIoDuPg" name="iUsuarioDAO">
+      <modelElement href="Lista_compra2.uml#_bTIjcLh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_bUE-qrh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_bTJKgLh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_bUE-q7h8EeuoK4ESIoDuPg" label="-"/>
+      <cardinality xmi:id="_bUE-rLh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <type xmi:id="_bUE-rbh8EeuoK4ESIoDuPg" name="IUsuarioDAO">
+        <modelElement href="Lista_compra2.uml#_KvYdQLh8EeuoK4ESIoDuPg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_K3Wtl7h8EeuoK4ESIoDuPg" name="loadUserByUsername">
+      <modelElement href="Lista_compra2.uml#_Kv6owbh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K3WtmLh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kv7P0Lh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K3Wtmbh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Wtmrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3Wtm7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyNu0Lh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3WtnLh8EeuoK4ESIoDuPg" name="UserDetails">
+          <modelElement href="Lista_compra2.uml#_KxpuIbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Wtnbh8EeuoK4ESIoDuPg" name="username">
+        <modelElement href="Lista_compra2.uml#_Kv6owrh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Wtnrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3Wtn7h8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3WtoLh8EeuoK4ESIoDuPg" name="findByUsername">
+      <modelElement href="Lista_compra2.uml#_Kv724Lh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K3Wtobh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kv8d8bh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K3Wtorh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Wto7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3WtpLh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyNu0bh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3Wtpbh8EeuoK4ESIoDuPg" name="Usuario">
+          <modelElement href="Lista_compra2.uml#_KxZ2gbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Wtprh8EeuoK4ESIoDuPg" name="username">
+        <modelElement href="Lista_compra2.uml#_Kv8d8Lh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Wtp7h8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3WtqLh8EeuoK4ESIoDuPg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_K3Wtqbh8EeuoK4ESIoDuPg" name="findAll">
+      <modelElement href="Lista_compra2.uml#_Kv8d9bh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K3Wtqrh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_Kv9FArh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K3Wtq7h8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3WtrLh8EeuoK4ESIoDuPg" label="1..*" max="-1" min="1"/>
+      <outParameters xmi:id="_K3Wtrbh8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_Kv9FALh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3Wtrrh8EeuoK4ESIoDuPg" name="Usuario">
+          <modelElement href="Lista_compra2.uml#_KxZ2gbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_K3Wtr7h8EeuoK4ESIoDuPg" name="save">
+      <modelElement href="Lista_compra2.uml#_KyOV4Lh8EeuoK4ESIoDuPg"/>
+      <stereotypes xmi:id="_K3WtsLh8EeuoK4ESIoDuPg" name="Annotations">
+        <modelElement href="Lista_compra2.uml#_KyO88Lh8EeuoK4ESIoDuPg"/>
+      </stereotypes>
+      <visibility xmi:id="_K3Wtsbh8EeuoK4ESIoDuPg" label="+"/>
+      <cardinality xmi:id="_K3Wtsrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_K3Wts7h8EeuoK4ESIoDuPg">
+        <modelElement href="Lista_compra2.uml#_KyOV4rh8EeuoK4ESIoDuPg"/>
+        <type xmi:id="_K3WttLh8EeuoK4ESIoDuPg" name="Usuario">
+          <modelElement href="Lista_compra2.uml#_KxZ2gbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_K3Wttbh8EeuoK4ESIoDuPg" name="usuario">
+        <modelElement href="Lista_compra2.uml#_KyOV4bh8EeuoK4ESIoDuPg"/>
+        <cardinality xmi:id="_K3Wttrh8EeuoK4ESIoDuPg" label="1" max="1" min="1"/>
+        <type xmi:id="_K3Wtt7h8EeuoK4ESIoDuPg" name="Usuario">
+          <modelElement href="Lista_compra2.uml#_KxZ2gbh8EeuoK4ESIoDuPg"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_K3bmALh8EeuoK4ESIoDuPg" name="UsernameNotFoundException">
+    <modelElement href="Lista_compra2.uml#_KxqVMrh8EeuoK4ESIoDuPg"/>
+    <visualProperties xmi:id="_K3bmAbh8EeuoK4ESIoDuPg" position="-351.0,265.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_K3bmArh8EeuoK4ESIoDuPg" name="Reference">
+      <modelElement href="Lista_compra2.uml#_KxqVM7h8EeuoK4ESIoDuPg"/>
+    </stereotypes>
+    <visibility xmi:id="_K3bmA7h8EeuoK4ESIoDuPg" label="+"/>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
