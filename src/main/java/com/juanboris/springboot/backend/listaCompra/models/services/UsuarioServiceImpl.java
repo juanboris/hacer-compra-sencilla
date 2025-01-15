@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -18,6 +19,7 @@ import com.juanboris.springboot.backend.listaCompra.models.dao.IUsuarioDAO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Usuario;
 
 @Service
+@Lazy
 public class UsuarioServiceImpl implements UserDetailsService, IUsuarioService {
 
   private Logger logger = LoggerFactory.getLogger(UsuarioServiceImpl.class);

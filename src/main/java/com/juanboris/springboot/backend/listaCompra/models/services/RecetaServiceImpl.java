@@ -2,12 +2,14 @@ package com.juanboris.springboot.backend.listaCompra.models.services;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.juanboris.springboot.backend.listaCompra.models.dao.IRecetaDAO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Receta;
 
 @Service
+@Lazy
 public class RecetaServiceImpl implements IRecetaService {
 
   @Autowired

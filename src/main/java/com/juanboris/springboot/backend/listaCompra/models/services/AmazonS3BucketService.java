@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import com.amazonaws.auth.AWSCredentials;
@@ -16,6 +17,7 @@ import com.amazonaws.services.s3.model.DeleteObjectRequest;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 
 @Service
+@Lazy
 public class AmazonS3BucketService {
 
   private AmazonS3 amazonS3;
