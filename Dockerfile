@@ -11,7 +11,7 @@ COPY . .
 RUN chmod +x ./mvnw && ./mvnw clean package -DskipTests
 
 # Etapa de ejecución
-FROM gcr.io/distroless/java:17
+FROM openjdk:17-jre-slim
 
 # Establecer el directorio de trabajo
 WORKDIR /app
