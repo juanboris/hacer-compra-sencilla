@@ -1,5 +1,5 @@
 # Etapa de construcción
-FROM openjdk:8-jdk-alpine AS builder
+FROM openjdk:17-jdk-slim AS builder
 
 # Establecer el directorio de trabajo
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY . .
 RUN chmod +x ./mvnw && ./mvnw clean package -DskipTests
 
 # Etapa de ejecución
-FROM gcr.io/distroless/java:8
+FROM gcr.io/distroless/java:17
 
 # Establecer el directorio de trabajo
 WORKDIR /app
