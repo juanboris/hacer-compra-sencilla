@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . .
 
 # Compilar la aplicación con Maven (asegúrate de tener mvnw en tu proyecto)
-RUN ./mvnw clean package -DskipTests
+RUN chmod +x ./mvnw && ./mvnw clean package -DskipTests
 
 # Etapa de ejecución
 FROM openjdk:8-jre-alpine
