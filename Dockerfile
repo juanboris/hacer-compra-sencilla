@@ -23,4 +23,4 @@ COPY --from=builder /app/target/*.jar app.jar
 EXPOSE 8080
 
 # Definir el comando de inicio
-ENTRYPOINT ["java","-Xmx256m", "-Xms128m","-XX:+UseG1GC", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-Xmx200m", "-Xms64m", "-Xss256k", "-XX:MaxMetaspaceSize=80m", "-XX:+UseG1GC", "-XX:+UseStringDeduplication", "-jar", "/app/app.jar"]
