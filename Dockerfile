@@ -11,7 +11,7 @@ COPY . .
 RUN chmod +x ./mvnw && ./mvnw clean package -DskipTests
 
 # Etapa de ejecución
-FROM openjdk:8-jre-alpine
+FROM gcr.io/distroless/java:8
 
 # Establecer el directorio de trabajo
 WORKDIR /app
@@ -19,8 +19,8 @@ WORKDIR /app
 # Copiar el JAR generado desde la etapa de construcción
 COPY --from=builder /app/target/*.jar app.jar
 
-# Exponer el puerto 8080
+# Exponer el puerto 8080 (solo informativo, Distroless no soporta EXPOSE directamente)
 EXPOSE 8080
 
 # Definir el comando de inicio
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java","-Xmx256m", "-Xms128m","-XX:+UseG1GC", "-jar", "/app/app.jar"]
