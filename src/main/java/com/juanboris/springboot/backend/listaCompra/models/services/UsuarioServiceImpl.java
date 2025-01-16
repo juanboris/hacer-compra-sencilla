@@ -19,7 +19,6 @@ import com.juanboris.springboot.backend.listaCompra.models.dao.IUsuarioDAO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Usuario;
 
 @Service
-@Lazy
 public class UsuarioServiceImpl implements UserDetailsService, IUsuarioService {
 
   private Logger logger = LoggerFactory.getLogger(UsuarioServiceImpl.class);

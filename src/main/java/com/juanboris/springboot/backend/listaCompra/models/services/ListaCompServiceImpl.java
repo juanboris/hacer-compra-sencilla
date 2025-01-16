@@ -13,7 +13,6 @@ import com.juanboris.springboot.backend.listaCompra.models.entity.ListaCom;
 import com.juanboris.springboot.backend.listaCompra.models.entity.ListaCompProducto;
 
 @Service
-@Lazy
 public class ListaCompServiceImpl implements IListaCompService {
   @Autowired
   private IListaCompDAO listaCompDAO;

@@ -9,7 +9,6 @@ import com.juanboris.springboot.backend.listaCompra.models.entity.ProducHistoric
 import com.juanboris.springboot.backend.listaCompra.models.entity.Producto;
 
 @Service
-@Lazy
 public class ProdPrecioHistServiceImpl implements ProdPrecioHistService {
 
   @Autowired
