@@ -1,4 +1,4 @@
-package com.juanboris.springboot.backend.listaCompra.metodosAux;
+package com.juanboris.springboot.backend.listaCompra.models.services;
 
 import java.io.File;
 import java.nio.file.Path;
