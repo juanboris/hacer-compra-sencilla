@@ -2,13 +2,7 @@ package com.juanboris.springboot.backend.listaCompra.controllers;
 
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -81,6 +75,32 @@ public class ListaCompController {
 			response.put(GeneralConstants.MENSAJE,
 					"La lista de la compra ID: " + id + " no existe en la base de datos");
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
+		}
+		else
+		{
+			Set<ListaCompProducto> productosOrdenados = new TreeSet<>(new Comparator<ListaCompProducto>() {
+				@Override
+				public int compare(ListaCompProducto o1, ListaCompProducto o2) {
+					// Ordenamos por la propiedad booleana, primero true (1) y luego false (0)
+					Boolean p1 = o1.getComprado();
+					Boolean p2 = o2.getComprado();
+
+					// Si p1 o p2 es nulo, tratamos como false
+					if (p1 == null) p1 = false;
+					if (p2 == null) p2 = false;
+
+					// Ordenamos por la propiedad booleana: primero true (1), luego false (0)
+					int result = Boolean.compare(p1, p2);
+
+					if (result == 0) {
+						// Si son iguales en la propiedad 'comprado', comparamos por ID para garantizar unicidad
+						return o1.getId().compareTo(o2.getId());
+					}
+					return result;
+				}
+			});
+			productosOrdenados.addAll(listaComp.getProductos());
+			listaComp.setProductos(productosOrdenados);
 		}
 
 		return new ResponseEntity<ListaCom>(listaComp, HttpStatus.OK);

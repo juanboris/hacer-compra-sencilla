@@ -67,4 +67,12 @@ public class ListaCompProductoId implements Serializable {
       return false;
     return true;
   }
+
+  public int compareTo(ListaCompProductoId other) {
+    int result = this.listaCompId.compareTo(other.listaCompId);
+    if (result == 0) {
+      result = this.productoId.compareTo(other.productoId);
+    }
+    return result;
+  }
 }
