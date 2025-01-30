@@ -5,6 +5,8 @@ import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 import javax.validation.Valid;
+
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComLigeraDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
@@ -53,7 +55,7 @@ public class ListaCompController {
 
 	/* Método GET normal */
 	@GetMapping(GeneralConstants.LISTA_COMP_RUTA)
-	public List<ListaCom> index(@RequestHeader(name = "Authorization") String token) {
+	public List<ListaComLigeraDTO> index(@RequestHeader(name = "Authorization") String token) {
 		String username = MetodosAux.obtenerUsername(token);
 		return iListaCompService.findAll().stream()
 				.filter(listaCom -> listaCom.getUsuario().getId() == obtenerUsuario(username).getId())
