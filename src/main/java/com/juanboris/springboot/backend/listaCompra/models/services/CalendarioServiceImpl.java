@@ -9,7 +9,6 @@ import com.juanboris.springboot.backend.listaCompra.models.dao.ICalendarioDAO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.RecetaCalendario;
 
 @Service
-@Lazy
 public class CalendarioServiceImpl implements ICalendarioService {
 
   @Autowired

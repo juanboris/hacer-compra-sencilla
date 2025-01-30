@@ -45,7 +45,6 @@ import com.juanboris.springboot.backend.listaCompra.models.services.ProdPrecioHi
 @CrossOrigin(origins = {GeneralConstants.URL_CONNECTION})
 @RestController
 @RequestMapping("/api")
-@Lazy
 public class ProductoRestController {
 
   @Autowired

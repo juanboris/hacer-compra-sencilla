@@ -9,7 +9,6 @@ import com.juanboris.springboot.backend.listaCompra.models.dao.IRecetaDAO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Receta;
 
 @Service
-@Lazy
 public class RecetaServiceImpl implements IRecetaService {
 
   @Autowired

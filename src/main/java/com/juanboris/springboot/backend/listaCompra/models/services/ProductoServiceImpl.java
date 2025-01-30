@@ -11,7 +11,6 @@ import com.juanboris.springboot.backend.listaCompra.models.dao.IProductoDAO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Producto;
 
 @Service
-@Lazy
 public class ProductoServiceImpl implements IProductoService {
   @Autowired
   private IProductoDAO productoDAO;
