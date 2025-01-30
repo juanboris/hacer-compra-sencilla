@@ -47,6 +47,7 @@ import com.juanboris.springboot.backend.listaCompra.models.services.IUsuarioServ
 @CrossOrigin(origins = {GeneralConstants.URL_CONNECTION})
 @RestController
 @RequestMapping("/api")
+@Lazy
 public class CalendarioRestController {
 
   @Autowired
