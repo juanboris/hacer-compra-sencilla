@@ -6,6 +6,8 @@ import java.util.Base64;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComLigeraDTO;
 import org.json.JSONObject;
 import com.juanboris.springboot.backend.listaCompra.models.entity.ListaCom;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Receta;
@@ -24,6 +26,7 @@ public class MetodosAux {
     return fecha;
   }
 
+  //Hacer sequences
   public static <T> Long obtenerProximoId(List<?> coleccion, String tipo) {
     Long idUltimo = 0L;
 
@@ -33,7 +36,7 @@ public class MetodosAux {
         idUltimo = recetas.get(recetas.size() - 1).getRecetaId();
         break;
       case "ListaComp":
-        List<ListaCom> listas = (List<ListaCom>) coleccion;
+        List<ListaComLigeraDTO> listas = (List<ListaComLigeraDTO>) coleccion;
         idUltimo = listas.get(listas.size() - 1).getId();
         break;
       case "RecetaCalendario":
