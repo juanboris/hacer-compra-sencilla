@@ -84,21 +84,25 @@ public class ListaCompController {
 				@Override
 				public int compare(ListaCompProducto o1, ListaCompProducto o2) {
 					// Ordenamos por la propiedad booleana, primero true (1) y luego false (0)
-					Boolean p1 = o1.getComprado();
-					Boolean p2 = o2.getComprado();
-
-					// Si p1 o p2 es nulo, tratamos como false
-					if (p1 == null) p1 = false;
-					if (p2 == null) p2 = false;
+					Boolean p1 = o1.getComprado() != null ? o1.getComprado() : false;
+					Boolean p2 = o2.getComprado() != null ? o2.getComprado() : false;
 
 					// Ordenamos por la propiedad booleana: primero true (1), luego false (0)
 					int result = Boolean.compare(p1, p2);
 
-					if (result == 0) {
+					if (result != 0) {
 						// Si son iguales en la propiedad 'comprado', comparamos por ID para garantizar unicidad
-						return o1.getId().compareTo(o2.getId());
+						return result;
 					}
-					return result;
+
+					String tipo1 = (o1.getProducto() != null && o1.getProducto().getTipo() != null) ? o1.getProducto().getTipo() : "";
+					String tipo2 = (o2.getProducto() != null && o2.getProducto().getTipo() != null) ? o2.getProducto().getTipo() : "";
+					result = tipo1.compareTo(tipo2);
+					if (result != 0)
+					{
+						return result;
+					}
+					return o1.getId().compareTo(o2.getId());
 				}
 			});
 			productosOrdenados.addAll(listaComp.getProductos());
