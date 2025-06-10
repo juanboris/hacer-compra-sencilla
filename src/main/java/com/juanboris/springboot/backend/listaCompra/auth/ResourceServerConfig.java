@@ -2,6 +2,8 @@ package com.juanboris.springboot.backend.listaCompra.auth;
 
 import java.util.Arrays;
 import java.util.Collections;
+
+import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,7 +34,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	public CorsConfigurationSource configurationSource() {
 		CorsConfiguration config = new CorsConfiguration();
 		//config.setAllowedOriginPatterns(Collections.singletonList("http://localhost:4200"));
-		config.setAllowedOrigins(Arrays.asList("https://hacer-compra-sencilla.web.app"));
+		config.setAllowedOrigins(Arrays.asList(GeneralConstants.URL_CONNECTION));
 		config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
 		config.setAllowCredentials(true);
 		config.setAllowedHeaders(Arrays.asList("Content-Type", "Authorization"));
