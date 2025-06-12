@@ -1,40 +1,29 @@
 package com.juanboris.springboot.backend.listaCompra.controllers;
 
-import java.math.BigDecimal;
-import java.time.Instant;
-import java.util.*;
-import java.util.stream.Collectors;
-import javax.validation.Valid;
-
+import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
+import com.juanboris.springboot.backend.listaCompra.metodosAux.MetodosAux;
+import com.juanboris.springboot.backend.listaCompra.metodosAux.NegativeNumberException;
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ListComLigeraProductsDetailedDTO;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComLigeraDTO;
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComProductoIds;
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComProductsDetailedDTO;
+import com.juanboris.springboot.backend.listaCompra.models.entity.*;
+import com.juanboris.springboot.backend.listaCompra.models.services.IUsuarioService;
+import com.juanboris.springboot.backend.listaCompra.models.services.ListaCompServiceImpl;
+import com.juanboris.springboot.backend.listaCompra.models.services.ProdPrecioHistService;
+import com.juanboris.springboot.backend.listaCompra.models.services.ProductoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
-import com.juanboris.springboot.backend.listaCompra.metodosAux.MetodosAux;
-import com.juanboris.springboot.backend.listaCompra.metodosAux.NegativeNumberException;
-import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComProductoIds;
-import com.juanboris.springboot.backend.listaCompra.models.entity.ListaCom;
-import com.juanboris.springboot.backend.listaCompra.models.entity.ListaCompProducto;
-import com.juanboris.springboot.backend.listaCompra.models.entity.ProducHistoricosFecha;
-import com.juanboris.springboot.backend.listaCompra.models.entity.Producto;
-import com.juanboris.springboot.backend.listaCompra.models.entity.Usuario;
-import com.juanboris.springboot.backend.listaCompra.models.services.IUsuarioService;
-import com.juanboris.springboot.backend.listaCompra.models.services.ListaCompServiceImpl;
-import com.juanboris.springboot.backend.listaCompra.models.services.ProdPrecioHistService;
-import com.juanboris.springboot.backend.listaCompra.models.services.ProductoServiceImpl;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.math.BigDecimal;
+import java.time.Instant;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @CrossOrigin(origins = { GeneralConstants.URL_CONNECTION })
 @RestController
@@ -64,25 +53,26 @@ public class ListaCompController {
 
 	@GetMapping("/listaComp/{id}")
 	public ResponseEntity<?> listaCompById(@PathVariable Long id) {
-		ListaCom listaComp = null;
+		ListComLigeraProductsDetailedDTO listComLigeraProductsDetailedDTO = null;
+		//ListaCom listaComp = null;
 		Map<String, Object> response = new HashMap<>();
 
 		try {
-			listaComp = iListaCompService.findById(id);
+			listComLigeraProductsDetailedDTO = iListaCompService.findByIdLazy(id);
 		} catch (DataAccessException e) {
 			response.put(GeneralConstants.MENSAJE, GeneralConstants.FALLO_GET_BBDD);
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-		if (listaComp == null) {
+		if (listComLigeraProductsDetailedDTO == null) {
 			response.put(GeneralConstants.MENSAJE,
 					"La lista de la compra ID: " + id + " no existe en la base de datos");
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
 		}
 		else
 		{
-			Set<ListaCompProducto> productosOrdenados = new TreeSet<>(new Comparator<ListaCompProducto>() {
+			Set<ListaComProductsDetailedDTO> productosOrdenados = new TreeSet<>(new Comparator<ListaComProductsDetailedDTO>() {
 				@Override
-				public int compare(ListaCompProducto o1, ListaCompProducto o2) {
+				public int compare(ListaComProductsDetailedDTO o1, ListaComProductsDetailedDTO o2) {
 					// Ordenamos por la propiedad booleana, primero true (1) y luego false (0)
 					Boolean p1 = o1.getComprado() != null ? o1.getComprado() : false;
 					Boolean p2 = o2.getComprado() != null ? o2.getComprado() : false;
@@ -105,11 +95,11 @@ public class ListaCompController {
 					return o1.getId().compareTo(o2.getId());
 				}
 			});
-			productosOrdenados.addAll(listaComp.getProductos());
-			listaComp.setProductos(productosOrdenados);
+			productosOrdenados.addAll(listComLigeraProductsDetailedDTO.getProductos());
+			listComLigeraProductsDetailedDTO.setProductos(productosOrdenados);
 		}
 
-		return new ResponseEntity<ListaCom>(listaComp, HttpStatus.OK);
+		return new ResponseEntity<ListComLigeraProductsDetailedDTO>(listComLigeraProductsDetailedDTO, HttpStatus.OK);
 
 	}
 
@@ -149,7 +139,7 @@ public class ListaCompController {
 
 	/* Servicio put para modificar la lista */
 	@PutMapping("/listaComp/{id}")
-	public ResponseEntity<?> update(@Valid @RequestBody ListaCom listaComp, BindingResult result,
+	public ResponseEntity<?> update(@Valid @RequestBody ListComLigeraProductsDetailedDTO listaComp, BindingResult result,
 			@PathVariable Long id) {
 		ListaCom currentLista = this.iListaCompService.findById(id);
 		ListaCom listaUpdated = null;
@@ -179,9 +169,9 @@ public class ListaCompController {
 		if (listaComp.getProductos().size() > 0) {
 			listaComp.getProductos().forEach(prod -> {
 				if (iProductoService.findById(prod.getId().getProductoId()) != null
-						&& prod.getProducto().getPrecio() != null) {
+						&& prod.getProducto().getUltimoPrecio() != null) {
 					Producto producto = iProductoService.findById(prod.getId().getProductoId());
-					producto.setPrecio(prod.getProducto().getPrecio());
+					producto.setPrecio(prod.getProducto().getUltimoPrecio());
 					producto.setMediaPrecio(guardarPrecioHistorico(producto));
 					iProductoService.save(producto);
 				}
@@ -189,7 +179,7 @@ public class ListaCompController {
 		}
 
 		try {
-			currentLista.setProductos(listaComp.getProductos());
+			currentLista.setProductos(mapProductosThinToProductos(listaComp.getProductos()));
 			if (currentLista.getProductos().size() > 0) {
 				currentLista.getProductos().stream().forEach(prod -> {
 					listaComp.getProductos().stream().forEach(prod2 -> {
@@ -202,7 +192,7 @@ public class ListaCompController {
 			} else {
 				currentLista.setProductos(null);
 			}
-			currentLista.getProductos().forEach(producto -> producto.getProducto().setPrecio(null));
+			//currentLista.getProductos().forEach(producto -> producto.getProducto().setPrecio(null));
 			listaUpdated = iListaCompService.save(currentLista);
 
 		} catch (DataAccessException e) {
@@ -219,9 +209,25 @@ public class ListaCompController {
 			response.put(GeneralConstants.ERROR, e.getMessage());
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
+		ListComLigeraProductsDetailedDTO listComLigeraProductsDetailedDTO = iListaCompService.mapEntityToDTO(listaUpdated);
 		response.put(GeneralConstants.MENSAJE, "¡La lista de la compra ha sido modificada con éxito!");
-		response.put("listaComp", listaUpdated);
+		response.put("listaCompThin", listComLigeraProductsDetailedDTO);
 		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
+	}
+
+	private Set<ListaCompProducto> mapProductosThinToProductos(Set<ListaComProductsDetailedDTO> productos) {
+		Set<ListaCompProducto> listaCompProductos = new HashSet<>();
+		if (productos != null && productos.size() > 0) {
+			productos.forEach(prod -> {
+				ListaCompProducto listaCompProducto = new ListaCompProducto();
+				listaCompProducto.setCantidad(prod.getCantidad());
+				listaCompProducto.setComprado(prod.getComprado());
+				listaCompProducto.setId(new ListaCompProductoId(prod.getId().getListaCompId(), prod.getId().getProductoId()));
+				listaCompProducto.setProducto(iProductoService.findById(prod.getId().getProductoId()));
+				listaCompProductos.add(listaCompProducto);
+			});
+		}
+		return listaCompProductos;
 	}
 
 	@DeleteMapping("/listaComp/{id}")

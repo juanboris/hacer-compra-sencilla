@@ -2,7 +2,9 @@ package com.juanboris.springboot.backend.listaCompra.models.dao;
 
 import java.math.BigInteger;
 import java.util.List;
+import java.util.Optional;
 
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ListComLigeraProductsDetailedProjectionDTO;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComLigeraProjectionDTO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -26,4 +28,6 @@ public interface IListaCompDAO extends JpaRepository<ListaCom, Long> {
 	public BigInteger obtenerProductosLista(@Param("listaId") Long idLista);
 
 	List<ListaComLigeraProjectionDTO> findAllProjectedBy();
+
+	Optional<ListComLigeraProductsDetailedProjectionDTO> findProjectedById(Long id);
 }

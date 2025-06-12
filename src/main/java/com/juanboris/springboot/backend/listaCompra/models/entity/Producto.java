@@ -246,16 +246,4 @@ public class Producto implements Serializable {
 		return "Producto [id=" + productoId + ", nombre=" + nombre + ", created=" + created + ", recetas=" + recetas
 				+ ", listas=" + listas + "]";
 	}
-
-	/**
-	 * Método para calcular la media del producto a partir de los precios
-	 * almacenados en la list preciosHistóricos
-	 */
-	private void calcularMedia() {
-
-		if (this.preciosHistoricos != null && this.preciosHistoricos.size() > 0) {
-			mediaPrecio = new BigDecimal(preciosHistoricos.stream()
-					.mapToDouble(a -> a.getPreciosHistoricos().doubleValue()).average().getAsDouble());
-		}
-	}
 }

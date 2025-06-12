@@ -2,6 +2,7 @@ package com.juanboris.springboot.backend.listaCompra.models.services;
 
 import java.util.List;
 
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ListComLigeraProductsDetailedDTO;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComLigeraDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -24,4 +25,8 @@ public interface IListaCompService {
 	public void anyadirProductoLista(Long idLista, Long idProducto, String cantidad);
 
 	public List<ListaCompProducto> obtenerProductosLista(Long idLista);
+
+	public ListComLigeraProductsDetailedDTO findByIdLazy(Long id);
+
+	public ListComLigeraProductsDetailedDTO mapEntityToDTO(ListaCom listaCom);
 }
