@@ -192,7 +192,11 @@ public class ListaCompController {
 			} else {
 				currentLista.setProductos(null);
 			}
-			//currentLista.getProductos().forEach(producto -> producto.getProducto().setPrecio(null));
+			currentLista.getProductos().stream().forEach(prod -> {
+				if (prod.getProducto().getPrecio() != null &&(prod.getProducto().getPrecio().isEmpty() || prod.getProducto().getPrecio().isBlank())) {
+					prod.getProducto().setPrecio(null);
+				}
+			});
 			listaUpdated = iListaCompService.save(currentLista);
 
 		} catch (DataAccessException e) {
