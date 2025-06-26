@@ -50,6 +50,7 @@ public class ListaCompServiceImpl implements IListaCompService {
   @Override
   @Transactional
   public ListaCom save(ListaCom listaCom) {
+
     return listaCompDAO.save(listaCom);
   }
 
@@ -110,10 +111,43 @@ public class ListaCompServiceImpl implements IListaCompService {
         listaComProductsDetailedDTOS.add(listaComProductsDetailedDTO);
       }
       ligeraProductsDetailedDTO.setProductos(listaComProductsDetailedDTOS);
+
+      Set<ListaComProductsDetailedDTO> productosOrdenados = getListaComProductsDetailedDTOS();
+      productosOrdenados.addAll(ligeraProductsDetailedDTO.getProductos());
+      ligeraProductsDetailedDTO.setProductos(productosOrdenados);
       return ligeraProductsDetailedDTO;
     }
 
     return null;
+  }
+
+  private static Set<ListaComProductsDetailedDTO> getListaComProductsDetailedDTOS() {
+    Set<ListaComProductsDetailedDTO> productosOrdenados = new TreeSet<>(new Comparator<ListaComProductsDetailedDTO>() {
+      @Override
+      public int compare(ListaComProductsDetailedDTO o1, ListaComProductsDetailedDTO o2) {
+        // Ordenamos por la propiedad booleana, primero true (1) y luego false (0)
+        Boolean p1 = o1.getComprado() != null ? o1.getComprado() : false;
+        Boolean p2 = o2.getComprado() != null ? o2.getComprado() : false;
+
+        // Ordenamos por la propiedad booleana: primero true (1), luego false (0)
+        int result = Boolean.compare(p1, p2);
+
+        if (result != 0) {
+          // Si son iguales en la propiedad 'comprado', comparamos por ID para garantizar unicidad
+          return result;
+        }
+
+        String tipo1 = (o1.getProducto() != null && o1.getProducto().getTipo() != null) ? o1.getProducto().getTipo() : "";
+        String tipo2 = (o2.getProducto() != null && o2.getProducto().getTipo() != null) ? o2.getProducto().getTipo() : "";
+        result = tipo1.compareTo(tipo2);
+        if (result != 0)
+        {
+          return result;
+        }
+        return o1.getId().compareTo(o2.getId());
+      }
+    });
+    return productosOrdenados;
   }
 
   @Override
@@ -122,7 +156,7 @@ public class ListaCompServiceImpl implements IListaCompService {
     listComLigeraProductsDetailedDTO.setId(listaCom.getId());
     listComLigeraProductsDetailedDTO.setPrecio(listaCom.getPrecio());
     listComLigeraProductsDetailedDTO.setCreated(listaCom.getCreated());
-    Set<ListaComProductsDetailedDTO> listaComProductsDetailedDTOS = new HashSet<>();
+    Set<ListaComProductsDetailedDTO> listaComProductsDetailedDTOS = getListaComProductsDetailedDTOS();
     for (ListaCompProducto listaCompProducto : listaCom.getProductos()) {
       ListaComProductsDetailedDTO listaComProductsDetailedDTO = new ListaComProductsDetailedDTO();
       listaComProductsDetailedDTO.setId(listaCompProducto.getId());

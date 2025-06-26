@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -54,7 +55,7 @@ public class ListaCompController {
 	@GetMapping("/listaComp/{id}")
 	public ResponseEntity<?> listaCompById(@PathVariable Long id) {
 		ListComLigeraProductsDetailedDTO listComLigeraProductsDetailedDTO = null;
-		//ListaCom listaComp = null;
+
 		Map<String, Object> response = new HashMap<>();
 
 		try {
@@ -67,36 +68,6 @@ public class ListaCompController {
 			response.put(GeneralConstants.MENSAJE,
 					"La lista de la compra ID: " + id + " no existe en la base de datos");
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
-		}
-		else
-		{
-			Set<ListaComProductsDetailedDTO> productosOrdenados = new TreeSet<>(new Comparator<ListaComProductsDetailedDTO>() {
-				@Override
-				public int compare(ListaComProductsDetailedDTO o1, ListaComProductsDetailedDTO o2) {
-					// Ordenamos por la propiedad booleana, primero true (1) y luego false (0)
-					Boolean p1 = o1.getComprado() != null ? o1.getComprado() : false;
-					Boolean p2 = o2.getComprado() != null ? o2.getComprado() : false;
-
-					// Ordenamos por la propiedad booleana: primero true (1), luego false (0)
-					int result = Boolean.compare(p1, p2);
-
-					if (result != 0) {
-						// Si son iguales en la propiedad 'comprado', comparamos por ID para garantizar unicidad
-						return result;
-					}
-
-					String tipo1 = (o1.getProducto() != null && o1.getProducto().getTipo() != null) ? o1.getProducto().getTipo() : "";
-					String tipo2 = (o2.getProducto() != null && o2.getProducto().getTipo() != null) ? o2.getProducto().getTipo() : "";
-					result = tipo1.compareTo(tipo2);
-					if (result != 0)
-					{
-						return result;
-					}
-					return o1.getId().compareTo(o2.getId());
-				}
-			});
-			productosOrdenados.addAll(listComLigeraProductsDetailedDTO.getProductos());
-			listComLigeraProductsDetailedDTO.setProductos(productosOrdenados);
 		}
 
 		return new ResponseEntity<ListComLigeraProductsDetailedDTO>(listComLigeraProductsDetailedDTO, HttpStatus.OK);
@@ -171,8 +142,10 @@ public class ListaCompController {
 				if (iProductoService.findById(prod.getId().getProductoId()) != null
 						&& prod.getProducto().getUltimoPrecio() != null) {
 					Producto producto = iProductoService.findById(prod.getId().getProductoId());
-					producto.setPrecio(prod.getProducto().getUltimoPrecio());
-					producto.setMediaPrecio(guardarPrecioHistorico(producto));
+					if (!new BigDecimal(producto.getPrecio()).equals(new BigDecimal(prod.getProducto().getUltimoPrecio()))) {
+						producto.setPrecio(prod.getProducto().getUltimoPrecio());
+						producto.setMediaPrecio(guardarPrecioHistorico(producto));
+					}
 					iProductoService.save(producto);
 				}
 			});
@@ -302,12 +275,12 @@ public class ListaCompController {
 		BigDecimal media = null;
 		if (Objects.nonNull(producto) && Objects.nonNull(producto.getPrecio())) {
 			ProducHistoricosFecha producHistoricosFecha = new ProducHistoricosFecha(producto,
-					new BigDecimal(producto.getPrecio()), Date.from(Instant.now()));
+					new BigDecimal(producto.getPrecio()).setScale(2, RoundingMode.HALF_UP), Date.from(Instant.now()));
 			prodPrecioHistService.save(producHistoricosFecha);
 			List<ProducHistoricosFecha> prodPreciosHist = prodPrecioHistService.findByProducto(producto);
 			if (prodPreciosHist != null && prodPreciosHist.size() > 0) {
 				media = new BigDecimal(prodPreciosHist.stream().mapToDouble(a -> a.getPreciosHistoricos().doubleValue())
-						.average().getAsDouble());
+						.average().getAsDouble()).setScale(2, RoundingMode.HALF_UP);
 			}
 		}
 		return media;
