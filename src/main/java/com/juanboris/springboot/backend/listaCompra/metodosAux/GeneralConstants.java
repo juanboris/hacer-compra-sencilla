@@ -18,8 +18,6 @@ public class GeneralConstants {
 
   public static final String ERROR = "error";
 
-  public static final String ID_RUTA = "/{id}";
-
   public static final String LISTA_COMP_STRING = "ListaComp";
 
   public static final String LISTA_COMP_RUTA = "/listaComp";
