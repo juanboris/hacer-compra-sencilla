@@ -142,7 +142,8 @@ public class ListaCompController {
 				if (iProductoService.findById(prod.getId().getProductoId()) != null
 						&& prod.getProducto().getUltimoPrecio() != null) {
 					Producto producto = iProductoService.findById(prod.getId().getProductoId());
-					if (!new BigDecimal(producto.getPrecio()).equals(new BigDecimal(prod.getProducto().getUltimoPrecio()))) {
+					if (producto.getPrecio() != null && prod.getProducto().getUltimoPrecio() != null
+							&& (!new BigDecimal(producto.getPrecio()).equals(new BigDecimal(prod.getProducto().getUltimoPrecio())))) {
 						producto.setPrecio(prod.getProducto().getUltimoPrecio());
 						producto.setMediaPrecio(guardarPrecioHistorico(producto));
 					}
