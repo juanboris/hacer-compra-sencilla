@@ -1,5 +1,6 @@
 package com.juanboris.springboot.backend.listaCompra.controllers;
 
+import com.amazonaws.util.StringUtils;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.MetodosAux;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.NegativeNumberException;
@@ -142,8 +143,8 @@ public class ListaCompController {
 				if (iProductoService.findById(prod.getId().getProductoId()) != null
 						&& prod.getProducto().getUltimoPrecio() != null) {
 					Producto producto = iProductoService.findById(prod.getId().getProductoId());
-					if (producto.getPrecio() != null && prod.getProducto().getUltimoPrecio() != null
-							&& (!new BigDecimal(producto.getPrecio()).equals(new BigDecimal(prod.getProducto().getUltimoPrecio())))) {
+					if (!StringUtils.isNullOrEmpty(prod.getProducto().getUltimoPrecio()) && (producto.getPrecio() == null  || (
+							(!new BigDecimal(producto.getPrecio()).equals(new BigDecimal(prod.getProducto().getUltimoPrecio())))))) {
 						producto.setPrecio(prod.getProducto().getUltimoPrecio());
 						producto.setMediaPrecio(guardarPrecioHistorico(producto));
 					}
