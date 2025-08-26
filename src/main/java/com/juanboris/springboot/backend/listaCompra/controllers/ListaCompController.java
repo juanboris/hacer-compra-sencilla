@@ -40,7 +40,7 @@ public class ListaCompController {
 
 	@Autowired
 	private IUsuarioService iUsuarioService;
-	
+
 	@Autowired
 	private ProdPrecioHistService prodPrecioHistService;
 
@@ -144,7 +144,10 @@ public class ListaCompController {
 						&& prod.getProducto().getUltimoPrecio() != null) {
 					Producto producto = iProductoService.findById(prod.getId().getProductoId());
 					if (!StringUtils.isNullOrEmpty(prod.getProducto().getUltimoPrecio()) && (producto.getPrecio() == null  || (
-							(!new BigDecimal(producto.getPrecio()).equals(new BigDecimal(prod.getProducto().getUltimoPrecio())))))) {
+							(!new BigDecimal(producto.getPrecio()).equals
+                                    (new BigDecimal(prod.getProducto().getUltimoPrecio().contains(",") ?
+                                            prod.getProducto().getUltimoPrecio().replace(",", ".") :
+                                            prod.getProducto().getUltimoPrecio())))))) {
 						producto.setPrecio(prod.getProducto().getUltimoPrecio());
 						producto.setMediaPrecio(guardarPrecioHistorico(producto));
 					}
