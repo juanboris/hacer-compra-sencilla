@@ -225,7 +225,7 @@ public class ProductoRestController {
       @RequestHeader(name = "Authorization") String token) {
     String username = MetodosAux.obtenerUsername(token);
 
-    return iProductoService.findByNombreAndUsername(term.concat("%"),
+    return iProductoService.findByNombreAndUsername(("%").concat(term).concat("%"),
         obtenerUsuario(username).getId());
   }
 
