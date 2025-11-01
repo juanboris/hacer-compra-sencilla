@@ -1,4 +1,4 @@
-CREATE EXTENSION IF NOT EXISTS unaccent;
+/*CREATE EXTENSION IF NOT EXISTS unaccent;
 
 /*Datos de prueba*/
 INSERT INTO usuarios (username, password, enabled) VALUES ('boris', '$2a$10$pB/.tyUwY835OvZQoYCAA.OATkf9d4GzJvKilwJAIevIOYZpwG4Jm', true);
@@ -91,3 +91,4 @@ INSERT INTO lista_com_producto (lista_comp_id, producto_id, cantidad) VALUES (5,
 INSERT INTO lista_com_producto (lista_comp_id, producto_id, cantidad) VALUES (6,8,3);
 INSERT INTO lista_com_producto (lista_comp_id, producto_id, cantidad) VALUES (6,12,3);
 INSERT INTO lista_com_producto (lista_comp_id, producto_id, cantidad) VALUES (6,7,3);
+*/
