@@ -1,26 +1,25 @@
 # Etapa de construcción
 FROM openjdk:17-jdk-slim AS builder
-
-# Establecer el directorio de trabajo
 WORKDIR /app
-
-# Copiar los archivos del proyecto al contenedor
 COPY . .
-
-# Compilar la aplicación con Maven (asegúrate de tener mvnw en tu proyecto)
 RUN chmod +x ./mvnw && ./mvnw clean package -DskipTests
 
 # Etapa de ejecución
 FROM openjdk:17-jdk-slim
-
-# Establecer el directorio de trabajo
 WORKDIR /app
 
-# Copiar el JAR generado desde la etapa de construcción
+# Instalar Tailscale
+RUN apt-get update && apt-get install -y curl iptables && \
+    curl -fsSL https://tailscale.com/install.sh | sh && \
+    rm -rf /var/lib/apt/lists/*
+
+# Copiar el JAR
 COPY --from=builder /app/target/*.jar app.jar
 
-# Exponer el puerto 8080 (solo informativo, Distroless no soporta EXPOSE directamente)
+# Copiar el script de arranque
+COPY start.sh start.sh
+RUN chmod +x start.sh
+
 EXPOSE 8080
 
-# Definir el comando de inicio
-ENTRYPOINT ["java", "-Xmx256m", "-Xms128m", "-Xss256k", "-XX:MaxMetaspaceSize=96m", "-XX:+UseSerialGC", "-XX:MaxHeapFreeRatio=30", "-XX:MinHeapFreeRatio=10", "-jar", "/app/app.jar"]
+ENTRYPOINT ["/app/start.sh"]
