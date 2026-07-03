@@ -22,6 +22,12 @@ public class GeneralConstants {
 
   public static final String LISTA_COMP_RUTA = "/listaComp";
 
+  public static final String CACHE_PRODUCTOS_PAGE = "productosPage";
+
+  public static final String CACHE_LISTA_COMP_INDEX = "listaCompIndex";
+
+  public static final String CACHE_LISTA_COMP_BY_ID = "listaCompById";
+
   private GeneralConstants() {
 
   }

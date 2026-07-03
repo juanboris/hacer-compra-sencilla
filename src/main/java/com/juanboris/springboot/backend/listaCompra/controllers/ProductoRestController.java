@@ -35,6 +35,7 @@ import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.MetodosAux;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.TiposProductoEnum;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ProductoDTO;
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ProductoProjectionDTO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.ProducHistoricosFecha;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Producto;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Usuario;
@@ -65,13 +66,18 @@ public class ProductoRestController {
         .collect(Collectors.toList());
   }
 
-  /* Método GET por paginación */
+  /*
+   * Método GET por paginación. Devuelve una proyección (solo los campos de ProductoProjectionDTO)
+   * en vez de la entidad Producto completa: Producto tiene 3 colecciones LAZY (recetas, listas,
+   * preciosHistoricos) que Jackson dispararía una a una por producto de la página al serializar la
+   * entidad completa.
+   */
   @GetMapping("/productos/page/{page}")
-  public Page<Producto> index(@PathVariable Integer page,
+  public Page<ProductoProjectionDTO> index(@PathVariable Integer page,
       @RequestHeader(name = "Authorization") String token,
       @RequestParam(required = false) String nombre) {
     String username = MetodosAux.obtenerUsername(token);
-    return iProductoService.findAllByUsuarioIdEquals(PageRequest.of(page, 20, Sort.by("id")),
+    return iProductoService.findProjectedByUsuarioIdEquals(PageRequest.of(page, 20, Sort.by("id")),
         obtenerUsuario(username).getId(), Objects.isNull(nombre) ? "" : nombre);
   }
 
@@ -225,7 +231,7 @@ public class ProductoRestController {
       @RequestHeader(name = "Authorization") String token) {
     String username = MetodosAux.obtenerUsername(token);
 
-    return iProductoService.findByNombreAndUsername(("%").concat(term).concat("%"),
+    return iProductoService.findByNombreAndUsername("%".concat(term).concat("%"),
         obtenerUsuario(username).getId());
   }
 

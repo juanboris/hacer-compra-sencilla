@@ -30,3 +30,4 @@ target/
 .settings/
 .idea/
 target
+.claude

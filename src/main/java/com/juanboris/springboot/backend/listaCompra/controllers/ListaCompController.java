@@ -44,13 +44,11 @@ public class ListaCompController {
 	@Autowired
 	private ProdPrecioHistService prodPrecioHistService;
 
-	/* Método GET normal */
+	/* Método GET normal. Filtra por usuario en la propia consulta (ver findAllByUsuarioId) */
 	@GetMapping(GeneralConstants.LISTA_COMP_RUTA)
 	public List<ListaComLigeraDTO> index(@RequestHeader(name = "Authorization") String token) {
 		String username = MetodosAux.obtenerUsername(token);
-		return iListaCompService.findAll().stream()
-				.filter(listaCom -> listaCom.getUsuario().getId() == obtenerUsuario(username).getId())
-				.collect(Collectors.toList());
+		return iListaCompService.findAllByUsuarioId(obtenerUsuario(username).getId());
 	}
 
 	@GetMapping("/listaComp/{id}")

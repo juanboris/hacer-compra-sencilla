@@ -9,12 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.juanboris.springboot.backend.listaCompra.auth.UsuarioDetails;
 import com.juanboris.springboot.backend.listaCompra.models.dao.IUsuarioDAO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Usuario;
 
@@ -44,8 +44,8 @@ public class UsuarioServiceImpl implements UserDetailsService, IUsuarioService {
     List<GrantedAuthority> authorities =
         usuario.getRoles().stream().map(e -> new SimpleGrantedAuthority(e.getNombre()))
             .peek(e -> logger.info("Role: " + e.getAuthority())).collect(Collectors.toList());
-    return new User(usuario.getUsername(), usuario.getPassword(), usuario.getEnabled(), true, true,
-        true, authorities);
+    return new UsuarioDetails(usuario.getId(), usuario.getUsername(), usuario.getPassword(),
+        usuario.getEnabled(), true, true, true, authorities);
   }
 
   @Override

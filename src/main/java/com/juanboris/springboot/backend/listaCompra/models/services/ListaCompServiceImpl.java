@@ -4,10 +4,14 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.*;
 
+import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.*;
 import com.juanboris.springboot.backend.listaCompra.models.dao.IUsuarioDAO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.ProducHistoricosFecha;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -27,7 +31,21 @@ public class ListaCompServiceImpl implements IListaCompService {
   @Override
   @Transactional(readOnly = true)
   public List<ListaComLigeraDTO> findAll() {
-    List<ListaComLigeraProjectionDTO> listsProjection = listaCompDAO.findAllProjectedBy();
+    return mapListaComLigera(listaCompDAO.findAllProjectedBy());
+  }
+
+  /*
+   * Igual que findAll(), pero filtrando por usuario en la propia consulta SQL en vez de traer
+   * todas las listas de todos los usuarios y descartar la mayoría en memoria.
+   */
+  @Override
+  @Transactional(readOnly = true)
+  @Cacheable(GeneralConstants.CACHE_LISTA_COMP_INDEX)
+  public List<ListaComLigeraDTO> findAllByUsuarioId(Long usuarioId) {
+    return mapListaComLigera(listaCompDAO.findProjectedByUsuarioId(usuarioId));
+  }
+
+  private List<ListaComLigeraDTO> mapListaComLigera(List<ListaComLigeraProjectionDTO> listsProjection) {
     List<ListaComLigeraDTO> listsDTO = new ArrayList<>();
     listsProjection.forEach(list -> {
       ListaComLigeraDTO listDTO = new ListaComLigeraDTO();
@@ -49,6 +67,8 @@ public class ListaCompServiceImpl implements IListaCompService {
 
   @Override
   @Transactional
+  @Caching(evict = {@CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_INDEX, allEntries = true),
+      @CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_BY_ID, allEntries = true)})
   public ListaCom save(ListaCom listaCom) {
 
     return listaCompDAO.save(listaCom);
@@ -62,17 +82,23 @@ public class ListaCompServiceImpl implements IListaCompService {
 
   @Override
   @Transactional
+  @Caching(evict = {@CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_INDEX, allEntries = true),
+      @CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_BY_ID, allEntries = true)})
   public void delete(ListaCom listaCom) {
     listaCompDAO.delete(listaCom);
   }
 
   @Override
   @Transactional
+  @Caching(evict = {@CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_INDEX, allEntries = true),
+      @CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_BY_ID, allEntries = true)})
   public void deleteProducto(Long idProducto, Long idLista) {
     listaCompDAO.deleteProducto(idProducto, idLista);
   }
 
   @Override
+  @Caching(evict = {@CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_INDEX, allEntries = true),
+      @CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_BY_ID, allEntries = true)})
   public void anyadirProductoLista(Long idLista, Long idProducto, String cantidad) {
     listaCompDAO.anyadirProductoLista(idProducto, idLista, cantidad);
   }
@@ -85,6 +111,7 @@ public class ListaCompServiceImpl implements IListaCompService {
 
   @Override
   @Transactional(readOnly = true)
+  @Cacheable(value = GeneralConstants.CACHE_LISTA_COMP_BY_ID, key = "#id")
   public ListComLigeraProductsDetailedDTO findByIdLazy(Long id) {
     ListComLigeraProductsDetailedProjectionDTO ligeraProductsDetailedProjectionDTO = listaCompDAO.findProjectedById(id).orElse(null);
     ListComLigeraProductsDetailedDTO ligeraProductsDetailedDTO = new ListComLigeraProductsDetailedDTO();

@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ProductoProjectionDTO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Producto;
 
 public interface IProductoDAO extends JpaRepository<Producto, Long> {
@@ -17,4 +18,12 @@ public interface IProductoDAO extends JpaRepository<Producto, Long> {
       @Param("user") Long usuario);
 
   public Page<Producto> findAllByUsuarioIdEqualsAndNombreStartsWithIgnoreCase(Pageable pageable, Long name, String nombre);
+
+  /*
+   * Proyección: solo trae las columnas de ProductoProjectionDTO, sin tocar las colecciones LAZY
+   * (recetas, listas, preciosHistoricos) que Jackson dispararía una a una por producto si se
+   * devolviera la entidad Producto completa.
+   */
+  public Page<ProductoProjectionDTO> findProjectedByUsuarioIdEqualsAndNombreStartsWithIgnoreCase(
+      Pageable pageable, Long usuarioId, String nombre);
 }

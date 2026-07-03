@@ -12,6 +12,8 @@ import com.juanboris.springboot.backend.listaCompra.models.entity.ListaCompProdu
 public interface IListaCompService {
 	public List<ListaComLigeraDTO> findAll();
 
+	public List<ListaComLigeraDTO> findAllByUsuarioId(Long usuarioId);
+
 	public Page<ListaCom> findAll(Pageable pageable);
 
 	public ListaCom save(ListaCom listaCom);

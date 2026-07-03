@@ -29,5 +29,8 @@ public interface IListaCompDAO extends JpaRepository<ListaCom, Long> {
 
 	List<ListaComLigeraProjectionDTO> findAllProjectedBy();
 
+	/* Filtra por usuario en la propia consulta, en vez de traer las listas de todos los usuarios */
+	List<ListaComLigeraProjectionDTO> findProjectedByUsuarioId(Long usuarioId);
+
 	Optional<ListComLigeraProductsDetailedProjectionDTO> findProjectedById(Long id);
 }
