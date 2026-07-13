@@ -3,6 +3,7 @@ package com.juanboris.springboot.backend.listaCompra.models.DTO;
 import java.io.Serializable;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
+import com.juanboris.springboot.backend.listaCompra.models.entity.TipoProducto;
 
 public class ProductoDTO implements Serializable {
 
@@ -11,11 +12,11 @@ public class ProductoDTO implements Serializable {
   private String nombre;
   private String precio;
   private String marca;
-  private String tipo;
+  private TipoProducto tipo;
 
   public ProductoDTO() {}
 
-  public ProductoDTO(Long id, String nombre, String precio, String marca, String tipo) {
+  public ProductoDTO(Long id, String nombre, String precio, String marca, TipoProducto tipo) {
     this.id = id;
     this.nombre = nombre;
     this.precio = precio;
@@ -50,11 +51,11 @@ public class ProductoDTO implements Serializable {
     this.marca = marca;
   }
 
-  public String getTipo() {
+  public TipoProducto getTipo() {
     return tipo;
   }
 
-  public void setTipo(String tipo) {
+  public void setTipo(TipoProducto tipo) {
     this.tipo = tipo;
   }
 

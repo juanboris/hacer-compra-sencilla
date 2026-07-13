@@ -47,7 +47,7 @@ public class Producto implements Serializable {
 	private String nombre;
 	private String precio;
 	private String marca;
-	private String tipo;
+	private TipoProducto tipo;
 	private BigDecimal mediaPrecio;
 	private Date created;
 	private Date modified;
@@ -63,7 +63,7 @@ public class Producto implements Serializable {
 		this.productoId = productoId;
 	}
 
-	public Producto(Long productoId, @NotEmpty String nombre, String precio, String marca, String tipo,
+	public Producto(Long productoId, @NotEmpty String nombre, String precio, String marca, TipoProducto tipo,
 			BigDecimal mediaPrecio, Date created, Date modified, Set<ProductoReceta> recetas,
 			Set<ListaCompProducto> listas, List<ProducHistoricosFecha> preciosHistoricos, Usuario usuario) {
 		this.productoId = productoId;
@@ -80,7 +80,7 @@ public class Producto implements Serializable {
 		this.usuario = usuario;
 	}
 
-	public Producto(String nombre, String precio, String marca, String tipo, Usuario usuario) {
+	public Producto(String nombre, String precio, String marca, TipoProducto tipo, Usuario usuario) {
 		this.nombre = nombre;
 		setPrecio(precio);
 		this.marca = marca;
@@ -164,11 +164,13 @@ public class Producto implements Serializable {
 		this.marca = marca;
 	}
 
-	public String getTipo() {
+	@ManyToOne
+	@JoinColumn(name = "tipo_id", nullable = false)
+	public TipoProducto getTipo() {
 		return tipo;
 	}
 
-	public void setTipo(String tipo) {
+	public void setTipo(TipoProducto tipo) {
 		this.tipo = tipo;
 	}
 

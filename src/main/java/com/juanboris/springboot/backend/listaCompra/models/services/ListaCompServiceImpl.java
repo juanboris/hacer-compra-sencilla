@@ -8,6 +8,7 @@ import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.*;
 import com.juanboris.springboot.backend.listaCompra.models.dao.IUsuarioDAO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.ProducHistoricosFecha;
+import com.juanboris.springboot.backend.listaCompra.models.entity.TipoProducto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -139,7 +140,10 @@ public class ListaCompServiceImpl implements IListaCompService {
         productoUltimoPrecioDTO.setMarca(listComProduct.getProducto().getMarca());
         productoUltimoPrecioDTO.setNombre(listComProduct.getProducto().getNombre());
         productoUltimoPrecioDTO.setMediaPrecio(Objects.toString(listComProduct.getProducto().getMediaPrecio(), ""));
-        productoUltimoPrecioDTO.setTipo(listComProduct.getProducto().getTipo());
+        TipoProductoProjectionDTO tipoProjection = listComProduct.getProducto().getTipo();
+        productoUltimoPrecioDTO.setTipo(tipoProjection != null
+            ? new TipoProducto(tipoProjection.getId(), tipoProjection.getNombre(), tipoProjection.getColor())
+            : null);
         productoUltimoPrecioDTO.setUltimoPrecio(Objects.toString(listComProduct.getProducto().getPrecio(), ""));
         listaComProductsDetailedDTO.setProducto(productoUltimoPrecioDTO);
 
@@ -172,8 +176,8 @@ public class ListaCompServiceImpl implements IListaCompService {
           return result;
         }
 
-        String tipo1 = (o1.getProducto() != null && o1.getProducto().getTipo() != null) ? o1.getProducto().getTipo() : "";
-        String tipo2 = (o2.getProducto() != null && o2.getProducto().getTipo() != null) ? o2.getProducto().getTipo() : "";
+        String tipo1 = (o1.getProducto() != null && o1.getProducto().getTipo() != null) ? o1.getProducto().getTipo().getNombre() : "";
+        String tipo2 = (o2.getProducto() != null && o2.getProducto().getTipo() != null) ? o2.getProducto().getTipo().getNombre() : "";
         result = tipo1.compareTo(tipo2);
         if (result != 0)
         {

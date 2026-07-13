@@ -33,13 +33,14 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.MetodosAux;
-import com.juanboris.springboot.backend.listaCompra.metodosAux.TiposProductoEnum;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ProductoDTO;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ProductoProjectionDTO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.ProducHistoricosFecha;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Producto;
+import com.juanboris.springboot.backend.listaCompra.models.entity.TipoProducto;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Usuario;
 import com.juanboris.springboot.backend.listaCompra.models.services.IProductoService;
+import com.juanboris.springboot.backend.listaCompra.models.services.ITipoProductoService;
 import com.juanboris.springboot.backend.listaCompra.models.services.IUsuarioService;
 import com.juanboris.springboot.backend.listaCompra.models.services.ProdPrecioHistService;
 
@@ -56,6 +57,9 @@ public class ProductoRestController {
 
   @Autowired
   private ProdPrecioHistService prodPrecioHistService;
+
+  @Autowired
+  private ITipoProductoService iTipoProductoService;
 
   /* Método GET normal */
   @GetMapping("/productos")
@@ -117,8 +121,11 @@ public class ProductoRestController {
       return new ResponseEntity<Map<String, Object>>(response, HttpStatus.BAD_REQUEST);
     }
     try {
+      TipoProducto tipoResuelto = producto.getTipo() != null && producto.getTipo().getId() != null
+          ? iTipoProductoService.findById(producto.getTipo().getId())
+          : null;
       productoBueno = new Producto(producto.getNombre(), producto.getPrecio(), producto.getMarca(),
-          producto.getTipo(), obtenerUsuario(username));
+          tipoResuelto, obtenerUsuario(username));
       newProducto = this.iProductoService.save(productoBueno);
       guardarPrecioHistorico(newProducto);
       if (Objects.nonNull(newProducto)) {
@@ -162,7 +169,10 @@ public class ProductoRestController {
       currentProducto.setNombre(producto.getNombre());
       currentProducto.setPrecio(producto.getPrecio());
       currentProducto.setMarca(producto.getMarca());
-      currentProducto.setTipo(producto.getTipo());
+      TipoProducto tipoResuelto = producto.getTipo() != null && producto.getTipo().getId() != null
+          ? iTipoProductoService.findById(producto.getTipo().getId())
+          : null;
+      currentProducto.setTipo(tipoResuelto);
       BigDecimal media = guardarPrecioHistorico(currentProducto);
       if (Objects.nonNull(media)) {
         currentProducto.setMediaPrecio(media);
@@ -233,20 +243,6 @@ public class ProductoRestController {
 
     return iProductoService.findByNombreAndUsername("%".concat(term).concat("%"),
         obtenerUsuario(username).getId());
-  }
-
-  /*
-   * Método que devuelve los tipos de productos existentes
-   */
-  @GetMapping("/productos/tiposProd")
-  public List<String> tiposProductos() {
-    List<String> tiposProducto = new ArrayList<String>();
-    TiposProductoEnum[] tiposProductoEnums = TiposProductoEnum.values();
-    for (TiposProductoEnum tip : tiposProductoEnums) {
-      tiposProducto.add(tip.getTipoProducto());
-    }
-
-    return tiposProducto;
   }
 
   private Usuario obtenerUsuario(String username) {

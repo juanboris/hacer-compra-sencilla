@@ -5,6 +5,6 @@ public interface ProductoProjectionDTO {
     public String getNombre();
     public String getPrecio();
     public String getMarca();
-    public String getTipo();
+    public TipoProductoProjectionDTO getTipo();
     public String getMediaPrecio();
 }
