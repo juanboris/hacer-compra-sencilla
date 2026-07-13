@@ -4,6 +4,7 @@ import com.amazonaws.util.StringUtils;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.MetodosAux;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.NegativeNumberException;
+import com.juanboris.springboot.backend.listaCompra.metodosAux.ProductoNoEncontradoException;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ListComLigeraProductsDetailedDTO;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComLigeraDTO;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComProductoIds;
@@ -181,6 +182,9 @@ public class ListaCompController {
 			response.put(GeneralConstants.MENSAJE, "Error al introducir la lista de la compra en la base de datos");
 			response.put(GeneralConstants.ERROR, e.getMessage());
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+		} catch (ProductoNoEncontradoException e) {
+			response.put(GeneralConstants.MENSAJE, e.getMessage());
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
 		} catch (NumberFormatException e) {
 			response.put(GeneralConstants.MENSAJE, "Has introducido un formato de número incorrecto");
 			response.put(GeneralConstants.ERROR, e.getMessage());
@@ -196,11 +200,17 @@ public class ListaCompController {
 		Set<ListaCompProducto> listaCompProductos = new HashSet<>();
 		if (productos != null && productos.size() > 0) {
 			productos.forEach(prod -> {
+				Producto producto = iProductoService.findById(prod.getId().getProductoId());
+				if (producto == null) {
+					throw new ProductoNoEncontradoException(
+							"Error: no se pudo editar, el producto ID: " + prod.getId().getProductoId()
+									+ " no existe en la base de datos");
+				}
 				ListaCompProducto listaCompProducto = new ListaCompProducto();
 				listaCompProducto.setCantidad(prod.getCantidad());
 				listaCompProducto.setComprado(prod.getComprado());
 				listaCompProducto.setId(new ListaCompProductoId(prod.getId().getListaCompId(), prod.getId().getProductoId()));
-				listaCompProducto.setProducto(iProductoService.findById(prod.getId().getProductoId()));
+				listaCompProducto.setProducto(producto);
 				listaCompProductos.add(listaCompProducto);
 			});
 		}
