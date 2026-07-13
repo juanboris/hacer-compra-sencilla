@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.GeneralConstants;
-import com.juanboris.springboot.backend.listaCompra.metodosAux.MetodosAux;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.NegativeNumberException;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Usuario;
 import com.juanboris.springboot.backend.listaCompra.models.services.IUsuarioService;
@@ -38,7 +37,6 @@ public class RegistroRestController {
   @PostMapping("/registro")
   public ResponseEntity<?> createUsuario(@Valid @RequestBody Usuario usuario,
       BindingResult result) {
-    Long id;
     boolean encontrado = false;
     Map<String, Object> response = new HashMap<>();
 
@@ -48,11 +46,6 @@ public class RegistroRestController {
       response.put(GeneralConstants.MENSAJE, "El usuario ya existe en la base de datos");
       return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
-    id = iUsuarioService.findAll().size() > 0
-        ? MetodosAux.obtenerProximoId(iUsuarioService.findAll(), "Usuario")
-        : 1L;
-    usuario.setId(id);
 
     try {
       usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));

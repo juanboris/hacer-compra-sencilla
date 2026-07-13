@@ -81,9 +81,6 @@ public class ListaCompController {
 		Map<String, Object> response = new HashMap<>();
 
 		String username = MetodosAux.obtenerUsername(token);
-		listaCom.setId(iListaCompService.findAll().size() > 0
-				? MetodosAux.obtenerProximoId(iListaCompService.findAll(), GeneralConstants.LISTA_COMP_STRING)
-				: 1L);
 		listaCom.setUsuario(obtenerUsuario(username));
 
 		if (result.hasErrors()) {
@@ -234,6 +231,22 @@ public class ListaCompController {
 		}
 		response.put(GeneralConstants.MENSAJE, "La lista de la compra se ha borrado correctamente");
 
+		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
+	}
+
+	@DeleteMapping("/listaComp/{id}/comprados")
+	public ResponseEntity<?> deleteProductosComprados(@PathVariable Long id) {
+		Map<String, Object> response = new HashMap<>();
+		try {
+			iListaCompService.deleteProductosComprados(id);
+		} catch (DataAccessException e) {
+			response.put(GeneralConstants.MENSAJE,
+					"Error al borrar los productos comprados de la lista de la compra en la base de datos");
+			response.put(GeneralConstants.ERROR,
+					e.getMessage().concat(": ").concat(e.getMostSpecificCause().getMessage()));
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		response.put(GeneralConstants.MENSAJE, "Los productos comprados se han eliminado correctamente de la lista");
 		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
 	}
 

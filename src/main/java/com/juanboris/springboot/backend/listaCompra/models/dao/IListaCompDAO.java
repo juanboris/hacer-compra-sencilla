@@ -19,6 +19,10 @@ public interface IListaCompDAO extends JpaRepository<ListaCom, Long> {
 	public void deleteProducto(@Param("productoId") Long idProducto, @Param("listaId") Long idLista);
 
 	@Modifying
+	@Query(value = "DELETE FROM lista_com_producto l WHERE l.lista_comp_id=:listaId AND l.comprado = true", nativeQuery = true)
+	public void deleteProductosComprados(@Param("listaId") Long idLista);
+
+	@Modifying
 	@Query(value = "INSERT INTO lista_com_producto l (lista_comp_id, producto_id, cantidad) VALUES (listaId,productoId,cantidad)", nativeQuery = true)
 	public void anyadirProductoLista(@Param("productoId") Long idProducto, @Param("listaId") Long idLista,
 			@Param("cantidad") String cantidad);

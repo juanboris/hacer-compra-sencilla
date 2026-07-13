@@ -176,9 +176,6 @@ public class CalendarioRestController {
     Set<ListaCompProducto> prods = new HashSet<ListaCompProducto>();
     List<RecetaCalendario> recetaCalendarios = new ArrayList<RecetaCalendario>();
 
-    listaDefecto.setId(iListaCompService.findAll().size() > 0 ? MetodosAux
-        .obtenerProximoId(iListaCompService.findAll(), GeneralConstants.LISTA_COMP_STRING) : 1L);
-
     String username = MetodosAux.obtenerUsername(token);
 
     try {

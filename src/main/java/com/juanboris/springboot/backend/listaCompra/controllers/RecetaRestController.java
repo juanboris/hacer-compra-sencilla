@@ -5,8 +5,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
 import javax.validation.Valid;
@@ -95,24 +97,11 @@ public class RecetaRestController {
   public ResponseEntity<?> createReceta(@Valid @RequestBody Receta receta, BindingResult result,
       @RequestHeader(name = "Authorization") String token) {
     Receta newReceta = null;
-    Long id;
+    Set<ProductoReceta> productosReceta = receta.getProductos();
+    receta.setProductos(new HashSet<>());
+    Map<String, Object> response = new HashMap<>();
 
     String username = MetodosAux.obtenerUsername(token);
-    id = iRecetaService.findAll().size() > 0
-        ? MetodosAux.obtenerProximoId(iRecetaService.findAll(), "Receta")
-        : 1L;
-    receta.setRecetaId(id);
-
-    /*
-     * Introducción del id del producto y la receta en cada uno de los productos
-     */
-    receta.getProductos().forEach(pr -> {
-      ProductoRecetaId prodProv = new ProductoRecetaId();
-      prodProv.setRecetaId(id);
-      prodProv.setProductoId(pr.getId().getProductoId());
-      pr.setId(prodProv);
-    });
-    Map<String, Object> response = new HashMap<>();
 
     try {
       if (receta.getTiempo() < 0) {
@@ -129,6 +118,18 @@ public class RecetaRestController {
       }
       receta.setUsuario(obtenerIdUsuario(username));
       newReceta = this.iRecetaService.save(receta);
+
+      if (productosReceta != null && !productosReceta.isEmpty()) {
+        final Long recetaIdGenerado = newReceta.getRecetaId();
+        productosReceta.forEach(pr -> {
+          ProductoRecetaId prodProv = new ProductoRecetaId();
+          prodProv.setRecetaId(recetaIdGenerado);
+          prodProv.setProductoId(pr.getId().getProductoId());
+          pr.setId(prodProv);
+        });
+        newReceta.setProductos(productosReceta);
+        newReceta = this.iRecetaService.save(newReceta);
+      }
     } catch (DataAccessException e) {
       response.put(GeneralConstants.MENSAJE, GeneralConstants.FALLO_INSERT_BBDD);
       response.put(GeneralConstants.ERROR,
