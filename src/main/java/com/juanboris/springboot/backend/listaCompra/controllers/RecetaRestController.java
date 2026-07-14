@@ -39,6 +39,7 @@ import com.juanboris.springboot.backend.listaCompra.metodosAux.IUploadService;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.MetodosAux;
 import com.juanboris.springboot.backend.listaCompra.metodosAux.NegativeNumberException;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.RecetaDTO;
+import com.juanboris.springboot.backend.listaCompra.models.DTO.RecetaLigeraDTO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.ProductoReceta;
 import com.juanboris.springboot.backend.listaCompra.models.entity.ProductoRecetaId;
 import com.juanboris.springboot.backend.listaCompra.models.entity.Receta;
@@ -66,11 +67,9 @@ public class RecetaRestController {
   private AmazonS3BucketService amazonS3BucketService;
 
   @GetMapping("/recetas")
-  public List<Receta> index(@RequestHeader(name = "Authorization") String token) {
+  public List<RecetaLigeraDTO> index(@RequestHeader(name = "Authorization") String token) {
     String username = MetodosAux.obtenerUsername(token);
-    return iRecetaService.findAll().stream()
-        .filter(calendario -> calendario.getUsuario().getId() == obtenerIdUsuario(username).getId())
-        .collect(Collectors.toList());
+    return iRecetaService.findAllByUsuarioId(obtenerIdUsuario(username).getId());
   }
 
   @GetMapping("/recetas/{id}")
