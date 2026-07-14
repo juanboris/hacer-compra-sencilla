@@ -154,9 +154,9 @@ public class ListaCompController {
 
 		try {
 			currentLista.setProductos(mapProductosThinToProductos(listaComp.getProductos()));
-			if (currentLista.getProductos().size() > 0) {
-				currentLista.getProductos().stream().forEach(prod -> {
-					listaComp.getProductos().stream().forEach(prod2 -> {
+			if (!currentLista.getProductos().isEmpty()) {
+				currentLista.getProductos().forEach(prod -> {
+					listaComp.getProductos().forEach(prod2 -> {
 						if (prod.getId().equals(prod2.getId())) {
 							prod.getId().setListaCompId(id);
 						}
