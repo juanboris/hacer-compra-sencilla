@@ -106,6 +106,14 @@ public class ListaCompServiceImpl implements IListaCompService {
   }
 
   @Override
+  @Transactional
+  @Caching(evict = {@CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_INDEX, allEntries = true),
+      @CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_BY_ID, allEntries = true)})
+  public int actualizarComprado(Long idLista, Long idProducto, Boolean comprado) {
+    return listaCompDAO.actualizarComprado(idLista, idProducto, comprado);
+  }
+
+  @Override
   @Caching(evict = {@CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_INDEX, allEntries = true),
       @CacheEvict(value = GeneralConstants.CACHE_LISTA_COMP_BY_ID, allEntries = true)})
   public void anyadirProductoLista(Long idLista, Long idProducto, String cantidad) {

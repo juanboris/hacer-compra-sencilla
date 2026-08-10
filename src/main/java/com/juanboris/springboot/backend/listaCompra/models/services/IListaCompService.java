@@ -26,6 +26,8 @@ public interface IListaCompService {
 
 	public void deleteProductosComprados(Long idLista);
 
+	public int actualizarComprado(Long idLista, Long idProducto, Boolean comprado);
+
 	public void anyadirProductoLista(Long idLista, Long idProducto, String cantidad);
 
 	public List<ListaCompProducto> obtenerProductosLista(Long idLista);

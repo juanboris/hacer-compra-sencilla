@@ -9,6 +9,8 @@ import com.juanboris.springboot.backend.listaCompra.models.DTO.ListComLigeraProd
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComLigeraDTO;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComProductoIds;
 import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaComProductsDetailedDTO;
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ListaCompProductoCompradoDTO;
+import com.juanboris.springboot.backend.listaCompra.models.DTO.ProductoPrecioDTO;
 import com.juanboris.springboot.backend.listaCompra.models.entity.*;
 import com.juanboris.springboot.backend.listaCompra.models.services.IUsuarioService;
 import com.juanboris.springboot.backend.listaCompra.models.services.ListaCompServiceImpl;
@@ -194,6 +196,85 @@ public class ListaCompController {
 		response.put(GeneralConstants.MENSAJE, "¡La lista de la compra ha sido modificada con éxito!");
 		response.put("listaCompThin", listComLigeraProductsDetailedDTO);
 		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.CREATED);
+	}
+
+	/* Servicio patch para marcar/desmarcar un producto de la lista como comprado */
+	@PatchMapping("/listaComp/{id}/productos/{productoId}/comprado")
+	public ResponseEntity<?> actualizarComprado(@PathVariable Long id, @PathVariable Long productoId,
+			@Valid @RequestBody ListaCompProductoCompradoDTO compradoDTO, BindingResult result) {
+		Map<String, Object> response = new HashMap<>();
+
+		if (result.hasErrors()) {
+			List<String> errors = result.getFieldErrors().stream()
+					.map(err -> "El campo '" + err.getField() + "' " + err.getDefaultMessage())
+					.collect(Collectors.toList());
+			response.put(GeneralConstants.ERRORS_STRING, errors);
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.BAD_REQUEST);
+		}
+
+		int filasActualizadas;
+		try {
+			filasActualizadas = iListaCompService.actualizarComprado(id, productoId, compradoDTO.getComprado());
+		} catch (DataAccessException e) {
+			response.put(GeneralConstants.MENSAJE, GeneralConstants.FALLO_UPDATE_BBDD);
+			response.put(GeneralConstants.ERROR,
+					e.getMessage().concat(": ").concat(e.getMostSpecificCause().getMessage()));
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+		if (filasActualizadas == 0) {
+			response.put(GeneralConstants.MENSAJE, "Error: no se pudo editar, el producto ID: " + productoId
+					+ " no existe en la lista ID: " + id);
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
+		}
+
+		response.put(GeneralConstants.MENSAJE, "El producto ha sido actualizado correctamente");
+		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
+	}
+
+	/* Servicio patch para actualizar el precio de un producto desde una lista de la compra */
+	@PatchMapping("/listaComp/{id}/productos/{productoId}/precio")
+	public ResponseEntity<?> actualizarPrecio(@PathVariable Long id, @PathVariable Long productoId,
+			@Valid @RequestBody ProductoPrecioDTO precioDTO, BindingResult result) {
+		Map<String, Object> response = new HashMap<>();
+
+		if (result.hasErrors()) {
+			List<String> errors = result.getFieldErrors().stream()
+					.map(err -> "El campo '" + err.getField() + "' " + err.getDefaultMessage())
+					.collect(Collectors.toList());
+			response.put(GeneralConstants.ERRORS_STRING, errors);
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.BAD_REQUEST);
+		}
+
+		Producto producto = iProductoService.findById(productoId);
+		if (producto == null) {
+			response.put(GeneralConstants.MENSAJE,
+					"Error: no se pudo editar, el producto ID: " + productoId + " no existe en la base de datos");
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.NOT_FOUND);
+		}
+
+		try {
+			String nuevoPrecio = precioDTO.getPrecio().contains(",") ? precioDTO.getPrecio().replace(",", ".")
+					: precioDTO.getPrecio();
+			if (producto.getPrecio() == null || !new BigDecimal(producto.getPrecio()).equals(new BigDecimal(nuevoPrecio))) {
+				producto.setPrecio(precioDTO.getPrecio());
+				producto.setMediaPrecio(guardarPrecioHistorico(producto));
+			}
+			iProductoService.save(producto);
+		} catch (DataAccessException e) {
+			response.put(GeneralConstants.MENSAJE, GeneralConstants.FALLO_UPDATE_BBDD);
+			response.put(GeneralConstants.ERROR,
+					e.getMessage().concat(": ").concat(e.getMostSpecificCause().getMessage()));
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+		} catch (NumberFormatException e) {
+			response.put(GeneralConstants.MENSAJE, "Has introducido un formato de número incorrecto");
+			response.put(GeneralConstants.ERROR, e.getMessage());
+			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+		response.put(GeneralConstants.MENSAJE, "El precio ha sido actualizado correctamente");
+		response.put("producto", producto);
+		return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
 	}
 
 	private Set<ListaCompProducto> mapProductosThinToProductos(Set<ListaComProductsDetailedDTO> productos) {
