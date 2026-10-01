@@ -23,3 +23,4 @@ public class CacheConfig {
         GeneralConstants.CACHE_LISTA_COMP_INDEX, GeneralConstants.CACHE_LISTA_COMP_BY_ID);
   }
 }
+
