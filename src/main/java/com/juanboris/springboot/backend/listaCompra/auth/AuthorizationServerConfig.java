@@ -3,6 +3,7 @@ package com.juanboris.springboot.backend.listaCompra.auth;
 import java.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -29,6 +30,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
   @Autowired
   private InfoAdicionalToken infoAdicionalToken;
+
+  @Value("${jwt.private-key}")
+  private String rsaPrivada;
+
+  @Value("${jwt.public-key}")
+  private String rsaPublica;
 
   @Override
   public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
@@ -60,8 +67,13 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
   @Bean
   public JwtAccessTokenConverter accessTokenConverter() {
     JwtAccessTokenConverter jwtAccessTokenConverter = new JwtAccessTokenConverter();
-    jwtAccessTokenConverter.setSigningKey(JwtConfig.RSA_PRIVADA_STRING);
-    jwtAccessTokenConverter.setVerifierKey(JwtConfig.RSA_PUBLICA_STRING);
+    jwtAccessTokenConverter.setSigningKey(pem(rsaPrivada));
+    jwtAccessTokenConverter.setVerifierKey(pem(rsaPublica));
     return jwtAccessTokenConverter;
+  }
+
+  /* Permite pasar el PEM en una sola línea (p.ej. en un fichero de variables de entorno) */
+  private static String pem(String valor) {
+    return valor.replace("\\n", "\n");
   }
 }

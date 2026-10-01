@@ -1,0 +1,8 @@
+.env
+.git
+target
+.idea
+.settings
+.claude
+.superpowers
+*.log

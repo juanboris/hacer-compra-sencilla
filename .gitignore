@@ -31,3 +31,13 @@ target/
 .idea/
 target
 .claude
+.settings
+.superpowers
+docs
+CLAUDE.md
+*.md
+
+# Secretos
+.env
+*.pem
+!.env.example
